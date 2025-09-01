@@ -70,9 +70,9 @@ export default function Gallery() {
   const currentPhotos = photoSets[selectedSet as keyof typeof photoSets].photos;
 
   return (
-    <section id="gallery">
+    <section id="gallery" className="bg-gradient-to-b from-[#fd8112] to-[#0085ca]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <h2 className="text-3xl font-semibold tracking-tight">Gallery</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-white">Gallery</h2>
         
         {/* Photo Set Selector */}
         <div className="mt-6 mb-8">
@@ -83,8 +83,8 @@ export default function Gallery() {
                 onClick={() => setSelectedSet(key)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   selectedSet === key
-                    ? 'bg-foreground text-background shadow-lg'
-                    : 'bg-black/[.05] dark:bg-white/[.05] hover:bg-black/[.08] dark:hover:bg-white/[.08]'
+                    ? 'bg-white text-[#0085ca] shadow-lg font-semibold'
+                    : 'bg-white/20 backdrop-blur-sm hover:bg-white/30 hover:shadow-md border border-white/30 text-white'
                 }`}
               >
                 {set.name}
@@ -98,7 +98,7 @@ export default function Gallery() {
           {currentPhotos.map((photo) => (
             <div 
               key={`${selectedSet}-${photo.id}`}
-              className="aspect-[4/3] rounded-lg overflow-hidden hover:shadow-md transition-all duration-200 cursor-pointer group relative"
+              className="aspect-[4/3] rounded-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group relative border-2 border-transparent hover:border-white/50"
             >
               <Image
                 src={photo.src}
@@ -107,21 +107,11 @@ export default function Gallery() {
                 height={300}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
               />
-              
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-200 flex items-center justify-center">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-white text-sm font-medium">
-                  View Photo
-                </div>
-              </div>
             </div>
           ))}
         </div>
         
-        {/* Set Info */}
-        <div className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-          Showing {photoSets[selectedSet as keyof typeof photoSets].name} • {currentPhotos.length} photos
-        </div>
+
       </div>
     </section>
   );

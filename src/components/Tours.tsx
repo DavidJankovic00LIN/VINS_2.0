@@ -33,10 +33,10 @@ export default function Tours() {
 
 
   return (
-    <section id="tours" className="bg-black/[.03] dark:bg-white/[.04]">
+    <section id="tours" className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <h2 className="text-3xl font-semibold tracking-tight">Tours</h2>
-        <p className="mt-3 text-base sm:text-lg max-w-3xl">
+        <h2 className="text-3xl font-semibold tracking-tight text-white">Tours</h2>
+        <p className="mt-3 text-base sm:text-lg max-w-3xl text-blue-200">
           Choose from our carefully curated tour categories, each offering unique experiences 
           tailored to different interests and preferences.
         </p>
@@ -47,12 +47,12 @@ export default function Tours() {
             <a 
               key={key}
               href={category.link}
-              className="rounded-xl border border-black/[.08] dark:border-white/[.12] p-6 bg-background hover:shadow-lg transition-all duration-200 cursor-pointer group block"
+              className="rounded-xl border border-blue-400/30 p-6 bg-white/10 backdrop-blur-sm hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group block hover:bg-white/20"
             >
-              <div className="text-4xl mb-4">{category.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{category.description}</p>
-              <div className="text-sm font-medium text-foreground group-hover:opacity-80">
+              <div className="text-4xl mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">{category.icon}</div>
+              <h3 className="text-xl font-semibold mb-2 text-white">{category.name}</h3>
+              <p className="text-sm text-blue-200 mb-4">{category.description}</p>
+              <div className="text-sm font-medium text-blue-300 group-hover:text-white transition-all">
                 {category.tourCount} tours available →
               </div>
             </a>

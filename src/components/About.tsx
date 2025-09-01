@@ -16,16 +16,16 @@ export default function About() {
   return (
     <section id="about" className="bg-gradient-to-b from-[#0085ca] to-[#fd8112] dark:bg-white/[.04]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <h2 className="text-3xl font-semibold tracking-tight">About Me</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-white">About Me</h2>
         
         <div className="mt-8 grid lg:grid-cols-2 gap-12 items-start">
           {/* Text Content */}
           <div className="space-y-4">
-            <p className="text-base sm:text-lg">
+            <p className="text-base sm:text-lg text-white/90">
               I'm a licensed female tourist guide with a passion for storytelling and crafting memorable experiences. 
               I focus on authentic, safe, and engaging tours tailored to your interests.
             </p>
-            <p className="text-base sm:text-lg">
+            <p className="text-base sm:text-lg text-white/90">
               With over 5 years of experience leading tours across the region, I've developed deep connections with local communities 
               and discovered hidden gems that most visitors never see. My approach combines historical knowledge with personal stories 
               to create truly immersive experiences.
@@ -51,7 +51,7 @@ export default function About() {
           {skills.map((skill) => (
             <div 
               key={skill} 
-              className="rounded-lg border border-black/[.08] dark:border-white/[.12] p-4 text-sm text-center bg-background hover:shadow-md transition-shadow"
+              className="rounded-lg border border-white/20 p-4 text-sm text-center bg-white/20 backdrop-blur-sm hover:bg-white/30 hover:shadow-lg hover:scale-105 transition-all duration-300 text-white font-medium"
             >
               {skill}
             </div>

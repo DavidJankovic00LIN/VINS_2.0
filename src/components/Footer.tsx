@@ -15,17 +15,17 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-black/[.05] dark:bg-white/[.05] border-t border-black/[.08] dark:border-white/[.12]">
+      <footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 border-t border-blue-500/20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="md:col-span-2">
-              <h3 className="text-lg font-semibold mb-4">VINS Tourist Guide</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 max-w-md">
+              <h3 className="text-lg font-semibold mb-4 text-white">VINS Tourist Guide</h3>
+              <p className="text-sm text-blue-200 mb-4 max-w-md">
                 Professional guided tours and travel experiences. Discover hidden gems, 
                 rich history, and authentic local culture with our expert guides.
               </p>
-              <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <div className="space-y-2 text-sm text-blue-200">
                 <div>🏢 Company: VINS Tourist Services</div>
                 <div>📋 PIB: 123456789</div>
                 <div>📄 Registration: 123456/2024</div>
@@ -35,8 +35,8 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <h4 className="font-semibold mb-4 text-white">Contact</h4>
+              <div className="space-y-2 text-sm text-blue-200">
                 <div>📧 Email: info@vins-guide.com</div>
                 <div>📱 Phone: +381 11 123 4567</div>
                 <div>📱 WhatsApp: +381 60 123 4567</div>
@@ -47,21 +47,21 @@ export default function Footer() {
 
             {/* Legal Links */}
             <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
+              <h4 className="font-semibold mb-4 text-white">Legal</h4>
               <div className="space-y-2 text-sm">
                 <button
                   onClick={openTerms}
-                  className="text-gray-600 dark:text-gray-400 hover:text-foreground transition-colors block"
+                  className="text-blue-200 hover:text-white transition-colors block"
                 >
                   📋 Terms & Conditions
                 </button>
                 <button
                   onClick={openPrivacy}
-                  className="text-gray-600 dark:text-gray-400 hover:text-foreground transition-colors block"
+                  className="text-blue-200 hover:text-white transition-colors block"
                 >
                   🔒 Privacy Policy
                 </button>
-                <div className="text-gray-600 dark:text-gray-400">
+                <div className="text-blue-200">
                   🍪 Cookie Policy
                 </div>
               </div>
@@ -69,11 +69,11 @@ export default function Footer() {
           </div>
 
           {/* Bottom Section */}
-          <div className="mt-8 pt-8 border-t border-black/[.08] dark:border-white/[.12] flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-gray-500 dark:text-gray-400">
+          <div className="mt-8 pt-8 border-t border-blue-500/20 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div className="text-sm text-blue-300">
               © 2024 VINS Tourist Guide. All rights reserved.
             </div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">
+            <div className="text-sm text-blue-300">
               Made with ❤️ in Serbia
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function Footer() {
               <div className="pt-6 border-t border-black/[.08] dark:border-white/[.12]">
                 <button
                   onClick={closeModals}
-                  className="inline-flex items-center justify-center w-full h-12 px-6 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center w-full h-12 px-6 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium hover:from-blue-600 hover:to-indigo-600 transition-all shadow-lg"
                 >
                   Back to Exploring
                 </button>
@@ -224,7 +224,7 @@ export default function Footer() {
               <div className="pt-6 border-t border-black/[.08] dark:border-white/[.12]">
                 <button
                   onClick={closeModals}
-                  className="inline-flex items-center justify-center w-full h-12 px-6 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center w-full h-12 px-6 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium hover:from-blue-600 hover:to-indigo-600 transition-all shadow-lg"
                 >
                   Back to Exploring
                 </button>

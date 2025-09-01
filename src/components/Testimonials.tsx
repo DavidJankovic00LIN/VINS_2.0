@@ -21,14 +21,14 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials">
+    <section id="testimonials" className="bg-gradient-to-b from-[#0085ca] to-[#fd8112]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <h2 className="text-3xl font-semibold tracking-tight">Testimonials</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-white">Testimonials</h2>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.name} 
-              className="rounded-xl border border-black/[.08] dark:border-white/[.12] p-6 bg-background hover:shadow-lg transition-shadow"
+              className="rounded-xl border border-white/30 p-6 bg-white/20 backdrop-blur-sm hover:shadow-xl hover:scale-105 transition-all duration-300 hover:bg-white/30"
             >
               <div className="flex items-center gap-3">
                 <div className="h-10 w-10 rounded-full overflow-hidden">
@@ -40,9 +40,9 @@ export default function Testimonials() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="text-sm font-medium">{testimonial.name}</div>
+                <div className="text-sm font-medium text-white">{testimonial.name}</div>
               </div>
-              <p className="mt-3 text-sm">"{testimonial.text}"</p>
+              <p className="mt-3 text-sm text-white/90">"{testimonial.text}"</p>
             </div>
           ))}
         </div>

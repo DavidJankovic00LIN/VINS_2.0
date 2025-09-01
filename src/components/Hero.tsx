@@ -3,7 +3,7 @@ import { profilePhoto } from '@/photos';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative isolate">
+    <section id="home" className="relative isolate bg-gradient-to-b from-[#fd8112] to-[#0085ca] dark:bg-white/[.04]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>

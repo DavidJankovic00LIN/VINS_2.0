@@ -14,7 +14,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="bg-black/[.03] dark:bg-white/[.04]">
+    <section id="about" className="bg-gradient-to-b from-[#0085ca] to-[#fd8112] dark:bg-white/[.04]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <h2 className="text-3xl font-semibold tracking-tight">About Me</h2>
         

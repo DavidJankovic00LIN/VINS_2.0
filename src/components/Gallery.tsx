@@ -72,7 +72,7 @@ export default function Gallery() {
   return (
     <section id="gallery" className="bg-gradient-to-b from-[#fd8112] to-[#0085ca]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <h2 className="text-3xl font-semibold tracking-tight text-white">Gallery</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-white">Galerija</h2>
         
         {/* Photo Set Selector */}
         <div className="mt-6 mb-8">

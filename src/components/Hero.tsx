@@ -8,11 +8,10 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white">
-              Private Guided Tours by a Local Expert
+            Ne skupljaj stvari, skupljaj uspomene.
             </h1>
             <p className="mt-4 text-base sm:text-lg max-w-2xl text-white/90">
-              Discover hidden gems, history, and culture with tailored experiences for solo travelers, couples, and small groups.
-            </p>
+            Ja sam Maja, Vas licencirani turistički vodič kroz Srbiju- zemlju bogate istorije, netaknute prirode, autentičnih ukusa i srdačnih ljudi.             </p>
             <div className="mt-8 flex gap-4">
               <a 
                 href="#tours" 

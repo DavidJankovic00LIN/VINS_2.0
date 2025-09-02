@@ -193,7 +193,7 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
             <div className="p-6 space-y-6">
               {/* Meta */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId) as any;
+                const t = tours.find(t => t.id === openTourId);
                 return t?.meta ? (
                   <div className="grid sm:grid-cols-3 gap-3 text-sm text-gray-700 dark:text-gray-300">
                     {t.meta.max && <div>👥 {t.meta.max}</div>}
@@ -205,10 +205,10 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
 
               {/* Opis */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId) as any;
+                const t = tours.find(t => t.id === openTourId);
                 return t?.opis ? (
                   <div className="space-y-3">
-                    {t.opis.map((p: string, i: number) => (
+                    {t.opis.map((p, i) => (
                       <p key={i} className="text-gray-700 dark:text-gray-300">{p}</p>
                     ))}
                   </div>
@@ -219,12 +219,12 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
 
               {/* Saznaćete */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId) as any;
+                const t = tours.find(t => t.id === openTourId);
                 return t?.saznacete ? (
                   <div>
                     <h4 className="font-medium mb-2">Na ovoj turi saznaćete:</h4>
                     <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                      {t.saznacete.map((it: string, i: number) => (
+                      {t.saznacete.map((it, i) => (
                         <li key={i} className="flex items-center gap-2"><span className="text-pink-500">✓</span>{it}</li>
                       ))}
                     </ul>
@@ -234,12 +234,12 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
 
               {/* Zašto */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId) as any;
+                const t = tours.find(t => t.id === openTourId);
                 return t?.zasto ? (
                   <div>
                     <h4 className="font-medium mb-2">Zašto ne smete propustiti?</h4>
                     <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                      {t.zasto.map((it: string, i: number) => (
+                      {t.zasto.map((it, i) => (
                         <li key={i} className="flex items-center gap-2"><span className="text-pink-500">✓</span>{it}</li>
                       ))}
                     </ul>
@@ -249,12 +249,12 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
 
               {/* Šta vas očekuje */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId) as any;
+                const t = tours.find(t => t.id === openTourId);
                 return t?.staVasOcekuje ? (
                   <div>
                     <h4 className="font-medium mb-2">Šta vas očekuje:</h4>
                     <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                      {t.staVasOcekuje.map((it: string, i: number) => (
+                      {t.staVasOcekuje.map((it, i) => (
                         <li key={i} className="flex items-center gap-2"><span className="text-pink-500">✓</span>{it}</li>
                       ))}
                     </ul>
@@ -264,32 +264,32 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
 
               {/* Marketing */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId) as any;
+                const t = tours.find(t => t.id === openTourId);
                 return t?.marketing ? (
                   <div className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    {t.marketing.map((m: string, i: number) => (<div key={i}>{m}</div>))}
+                    {t.marketing.map((m, i) => (<div key={i}>{m}</div>))}
                   </div>
                 ) : null;
               })()}
 
               {/* Info */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId) as any;
+                const t = tours.find(t => t.id === openTourId);
                 return t?.info ? (
                   <div className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    {t.info.map((inf: string, i: number) => (<div key={i}>{inf}</div>))}
+                    {t.info.map((inf, i) => (<div key={i}>{inf}</div>))}
                   </div>
                 ) : null;
               })()}
 
               {/* Ponesite */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId) as any;
+                const t = tours.find(t => t.id === openTourId);
                 return t?.ponesite ? (
                   <div>
                     <h4 className="font-medium mb-2">Ponesite:</h4>
                     <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                      {t.ponesite.map((it: string, i: number) => (
+                      {t.ponesite.map((it, i) => (
                         <li key={i} className="flex items-center gap-2"><span className="text-pink-500">✓</span>{it}</li>
                       ))}
                     </ul>

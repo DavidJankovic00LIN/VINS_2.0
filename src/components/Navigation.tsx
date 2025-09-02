@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useI18n } from '@/i18n/I18nProvider';
 
 export default function Navigation() {
@@ -35,12 +36,12 @@ export default function Navigation() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 backdrop-blur border-b border-blue-500/20 shadow-lg">
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="/" className="font-semibold tracking-tight text-white hover:text-blue-300 transition-colors">{t('brand')}</a>
+        <Link href="/" className="font-semibold tracking-tight text-white hover:text-blue-300 transition-colors">{t('brand')}</Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-6 text-sm">
-          <a href="/#about" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">{t('nav_about')}</a>
-          <a href="/#gallery" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">{t('nav_gallery')}</a>
+          <Link href="/#about" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">{t('nav_about')}</Link>
+          <Link href="/#gallery" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">{t('nav_gallery')}</Link>
           
           {/* Tours Dropdown */}
           <div className="relative">
@@ -53,17 +54,17 @@ export default function Navigation() {
             {isToursMenuOpen && (
               <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-black/[.08] dark:border-white/[.12] rounded-lg shadow-lg py-2 z-50">
                 {tourCategories.map((tour) => (
-                  <a key={tour.link} href={tour.link} className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-black/[.05] dark:hover:bg-white/[.05] transition-colors" onClick={() => setIsToursMenuOpen(false)}>
+                  <Link key={tour.link} href={tour.link} className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-black/[.05] dark:hover:bg-white/[.05] transition-colors" onClick={() => setIsToursMenuOpen(false)}>
                     <span className="text-lg">{tour.icon}</span>
                     {tour.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
           </div>
           
-          <a href="/#testimonials" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">{t('nav_testimonials')}</a>
-          <a href="/#contact" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">{t('nav_contact')}</a>
+          <Link href="/#testimonials" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">{t('nav_testimonials')}</Link>
+          <Link href="/#contact" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">{t('nav_contact')}</Link>
         </div>
         
         {/* Desktop Language Selector */}
@@ -98,8 +99,8 @@ export default function Navigation() {
       {/* Mobile Dropdown Menu */}
       <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="bg-gradient-to-b from-slate-900 to-indigo-900 backdrop-blur border-t border-blue-500/20 px-4 py-4 space-y-3">
-          <a href="/#about" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t('nav_about')}</a>
-          <a href="/#gallery" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t('nav_gallery')}</a>
+          <Link href="/#about" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t('nav_about')}</Link>
+          <Link href="/#gallery" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t('nav_gallery')}</Link>
           
           {/* Mobile Tours Dropdown */}
           <div>
@@ -112,17 +113,17 @@ export default function Navigation() {
             <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isToursMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="pl-4 space-y-2 mt-2">
                 {tourCategories.map((tour) => (
-                  <a key={tour.link} href={tour.link} className="flex items-center gap-3 py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => { setIsMobileMenuOpen(false); setIsToursMenuOpen(false); }}>
+                  <Link key={tour.link} href={tour.link} className="flex items-center gap-3 py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => { setIsMobileMenuOpen(false); setIsToursMenuOpen(false); }}>
                     <span className="text-lg">{tour.icon}</span>
                     {tour.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
           
-          <a href="/#testimonials" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t('nav_testimonials')}</a>
-          <a href="/#contact" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t('nav_contact')}</a>
+          <Link href="/#testimonials" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t('nav_testimonials')}</Link>
+          <Link href="/#contact" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t('nav_contact')}</Link>
           
           {/* Mobile Language Selector */}
           <div className="pt-3 border-t border-blue-500/20 mt-3">

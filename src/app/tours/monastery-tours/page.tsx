@@ -220,14 +220,14 @@ export default function MonasteryTours() {
             </div>
             <div className="p-6 space-y-6">
               {(() => {
-                const t: any = tours.find(tt => tt.id === openTourId);
+                const t = tours.find(tt => tt.id === openTourId);
                 if (!t) return null;
                 return (
                   <>
                     {/* Opis */}
                     {t.opis && (
                       <div className="space-y-3">
-                        {t.opis.map((p: string, i: number) => (
+                        {t.opis.map((p, i) => (
                           <p key={i} className="text-gray-700 dark:text-gray-300">{p}</p>
                         ))}
                       </div>
@@ -238,7 +238,7 @@ export default function MonasteryTours() {
                       <div>
                         <h4 className="font-medium mb-2">Šta vas očekuje:</h4>
                         <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                          {t.staVasOcekuje.map((it: string, i: number) => (
+                          {t.staVasOcekuje.map((it, i) => (
                             <li key={i} className="flex items-center gap-2"><span className="text-amber-500">✓</span>{it}</li>
                           ))}
                         </ul>
@@ -248,7 +248,7 @@ export default function MonasteryTours() {
                     {/* Info */}
                     {t.info && (
                       <div className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                        {t.info.map((inf: string, i: number) => (<div key={i}>{inf}</div>))}
+                        {t.info.map((inf, i) => (<div key={i}>{inf}</div>))}
                       </div>
                     )}
 
@@ -257,7 +257,7 @@ export default function MonasteryTours() {
                       <div>
                         <h4 className="font-medium mb-2">Preporuke:</h4>
                         <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                          {t.preporuke.map((it: string, i: number) => (
+                          {t.preporuke.map((it, i) => (
                             <li key={i} className="flex items-center gap-2"><span className="text-amber-500">•</span>{it}</li>
                           ))}
                         </ul>

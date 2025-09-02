@@ -42,12 +42,12 @@ export default function Navigation() {
   return (
          <header className="fixed top-0 inset-x-0 z-50 bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 backdrop-blur border-b border-blue-500/20 shadow-lg">
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                 <a href="#home" className="font-semibold tracking-tight text-white hover:text-blue-300 transition-colors">VINS Guide</a>
+                 <a href="/" className="font-semibold tracking-tight text-white hover:text-blue-300 transition-colors">Maja Tours</a>
         
         {/* Desktop Navigation */}
-                 <div className="hidden md:flex gap-6 text-sm">
-                       <a href="#about" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">About</a>
-            <a href="#gallery" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">Gallery</a>
+        <div className="hidden md:flex gap-6 text-sm">
+                       <a href="/#about" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">O meni</a>
+            <a href="/#gallery" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">Galerija</a>
           
           {/* Tours Dropdown */}
           <div className="relative">
@@ -55,7 +55,7 @@ export default function Navigation() {
                onClick={toggleToursMenu}
                className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200 flex items-center gap-1"
              >
-               Tours
+               Ture
               <svg className={`w-4 h-4 transition-transform ${isToursMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -63,11 +63,16 @@ export default function Navigation() {
             
             {isToursMenuOpen && (
               <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-black/[.08] dark:border-white/[.12] rounded-lg shadow-lg py-2 z-50">
-                {tourCategories.map((tour) => (
+                {[
+                  { name: 'Ljubavne ture', link: '/tours/love-tours', icon: '💕' },
+                  { name: 'Manastirske ture', link: '/tours/monastery-tours', icon: '⛪' },
+                  { name: 'Gradske i istorijske ture', link: '/tours/city-history-tours', icon: '🏛️' },
+                  { name: 'Privatne ture', link: '/tours/custom-tours', icon: '🎯' }
+                ].map((tour) => (
                   <a
                     key={tour.link}
                     href={tour.link}
-                    className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-black/[.05] dark:hover:bg-white/[.05] transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-black/[.05] dark:hover:bg:white/[.05] transition-colors"
                     onClick={() => setIsToursMenuOpen(false)}
                   >
                     <span className="text-lg">{tour.icon}</span>
@@ -78,16 +83,16 @@ export default function Navigation() {
             )}
           </div>
           
-                                 <a href="#testimonials" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">Testimonials</a>
-            <a href="#contact" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">Contact</a>
+                                 <a href="/#testimonials" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">Utisci</a>
+            <a href="/#contact" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">Kontakt</a>
         </div>
         
         {/* Desktop Language Selector */}
         <div className="hidden md:block relative">
-                     <button
-             onClick={toggleLanguageMenu}
+          <button
+            onClick={toggleLanguageMenu}
              className="h-9 px-4 rounded-full border border-blue-400/30 text-white text-sm font-medium hover:bg-blue-500/20 hover:border-blue-400/50 hover:scale-105 transition-all flex items-center gap-2"
-           >
+          >
             {selectedLanguage}
             <svg className={`w-4 h-4 transition-transform ${isLanguageMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -112,11 +117,11 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Burger Menu */}
-                 <button
-           onClick={toggleMobileMenu}
+        <button
+          onClick={toggleMobileMenu}
            className="md:hidden p-2 hover:bg-blue-500/20 rounded-lg transition-colors text-white"
-           aria-label="Toggle mobile menu"
-         >
+           aria-label="Otvori mobilni meni"
+        >
           <div className="w-6 h-6 flex flex-col justify-center items-center">
             <span className={`block w-5 h-0.5 bg-current transform transition duration-300 ease-in-out ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'}`}></span>
             <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
@@ -128,8 +133,8 @@ export default function Navigation() {
       {/* Mobile Dropdown Menu */}
              <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
          <div className="bg-gradient-to-b from-slate-900 to-indigo-900 backdrop-blur border-t border-blue-500/20 px-4 py-4 space-y-3">
-          <a href="#about" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>About</a>
-          <a href="#gallery" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Gallery</a>
+          <a href="/#about" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>O meni</a>
+          <a href="/#gallery" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Galerija</a>
           
           {/* Mobile Tours Dropdown */}
           <div>
@@ -137,7 +142,7 @@ export default function Navigation() {
               onClick={toggleToursMenu}
               className="flex items-center justify-between w-full py-2 text-sm text-white hover:text-blue-300 transition-colors"
             >
-              Tours
+              Ture
               <svg className={`w-4 h-4 transition-transform ${isToursMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -145,16 +150,21 @@ export default function Navigation() {
             
             <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isToursMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="pl-4 space-y-2 mt-2">
-                {tourCategories.map((tour) => (
-                                     <a
-                     key={tour.link}
-                     href={tour.link}
-                     className="flex items-center gap-3 py-2 text-sm text-white hover:text-blue-300 transition-colors"
-                     onClick={() => {
-                       setIsMobileMenuOpen(false);
-                       setIsToursMenuOpen(false);
-                     }}
-                   >
+                {[
+                  { name: 'Ljubavne ture', link: '/tours/love-tours', icon: '💕' },
+                  { name: 'Manastirske ture', link: '/tours/monastery-tours', icon: '⛪' },
+                  { name: 'Gradske i istorijske ture', link: '/tours/city-history-tours', icon: '🏛️' },
+                  { name: 'Privatne ture', link: '/tours/custom-tours', icon: '🎯' }
+                ].map((tour) => (
+                  <a
+                    key={tour.link}
+                    href={tour.link}
+                    className="flex items-center gap-3 py-2 text-sm text-white hover:text-blue-300 transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsToursMenuOpen(false);
+                    }}
+                  >
                     <span className="text-lg">{tour.icon}</span>
                     {tour.name}
                   </a>
@@ -163,12 +173,12 @@ export default function Navigation() {
             </div>
           </div>
           
-          <a href="#testimonials" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</a>
-          <a href="#contact" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+          <a href="/#testimonials" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Utisci</a>
+          <a href="/#contact" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Kontakt</a>
           
           {/* Mobile Language Selector */}
           <div className="pt-3 border-t border-blue-500/20 mt-3">
-            <div className="text-xs text-blue-300 mb-3 font-medium">Select Language</div>
+            <div className="text-xs text-blue-300 mb-3 font-medium">Izaberite jezik</div>
             <div className="grid grid-cols-2 gap-2">
               {languages.map((lang) => (
                 <button

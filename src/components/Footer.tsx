@@ -71,10 +71,9 @@ export default function Footer() {
           {/* Bottom Section */}
           <div className="mt-8 pt-8 border-t border-blue-500/20 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-sm text-blue-300">
-              © 2024 VINS Turistički vodič. Sva prava zadržana.
+              © 2025 VINS Turistički vodič. Sva prava zadržana.
             </div>
             <div className="text-sm text-blue-300">
-              Napravljeno sa ❤️ u Srbiji
             </div>
           </div>
         </div>

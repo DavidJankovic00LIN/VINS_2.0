@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import AnimatedSection from '@/components/AnimatedSection';
 import { 
   nature1, nature2, nature3, nature4, nature5, nature6, nature7, nature8,
   city1, city2, city3, city4, city5, city6, city7, city8,
@@ -65,53 +66,57 @@ export default function Gallery() {
         { id: 8, src: food8, title: 'Food Photo 8', category: 'food' }
       ]
     }
-  };
+  } as const;
 
   const currentPhotos = photoSets[selectedSet as keyof typeof photoSets].photos;
 
   return (
     <section id="gallery" className="bg-gradient-to-b from-[#fd8112] to-[#0085ca]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <h2 className="text-3xl font-semibold tracking-tight text-white">Galerija</h2>
+        <AnimatedSection direction="fade">
+          <h2 className="text-3xl font-semibold tracking-tight text-white">Galerija</h2>
+        </AnimatedSection>
         
         {/* Photo Set Selector */}
-        <div className="mt-6 mb-8">
-          <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
-            {Object.entries(photoSets).map(([key, set]) => (
-              <button
-                key={key}
-                onClick={() => setSelectedSet(key)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  selectedSet === key
-                    ? 'bg-white text-[#0085ca] shadow-lg font-semibold'
-                    : 'bg-white/20 backdrop-blur-sm hover:bg-white/30 hover:shadow-md border border-white/30 text-white'
-                }`}
-              >
-                {set.name}
-              </button>
-            ))}
+        <AnimatedSection direction="fade" delayMs={100}>
+          <div className="mt-6 mb-8">
+            <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+              {Object.entries(photoSets).map(([key, set]) => (
+                <button
+                  key={key}
+                  onClick={() => setSelectedSet(key)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    selectedSet === key
+                      ? 'bg-white text-[#0085ca] shadow-lg font-semibold'
+                      : 'bg:white/20 backdrop-blur-sm hover:bg-white/30 hover:shadow-md border border-white/30 text-white'
+                  }`}
+                >
+                  {set.name}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
 
         {/* Photo Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          {currentPhotos.map((photo) => (
-            <div 
-              key={`${selectedSet}-${photo.id}`}
-              className="aspect-[4/3] rounded-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group relative border-2 border-transparent hover:border-white/50"
-            >
-              <Image
-                src={photo.src}
-                alt={photo.title}
-                width={400}
-                height={300}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
-              />
-            </div>
-          ))}
-        </div>
-        
-
+        <AnimatedSection direction="fade" delayMs={150}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {currentPhotos.map((photo) => (
+              <div 
+                key={`${selectedSet}-${photo.id}`}
+                className="aspect-[4/3] rounded-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group relative border-2 border-transparent hover:border-white/50"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.title}
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                />
+              </div>
+            ))}
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

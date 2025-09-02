@@ -1,0 +1,127 @@
+const sr = {
+  // Brand
+  brand: 'Maja Tours',
+  
+  // Navigation
+  nav_about: 'O meni',
+  nav_gallery: 'Galerija',
+  nav_tours: 'Ture',
+  nav_testimonials: 'Utisci',
+  nav_contact: 'Kontakt',
+  nav_language: 'Izaberite jezik',
+  
+  // Hero Section
+  hero_title: 'Ne skupljaj stvari, skupljaj uspomene.',
+  hero_subtitle: 'Ja sam Maja, Vaš licencirani turistički vodič kroz Srbiju – zemlju bogate istorije, netaknute prirode, autentičnih ukusa i srdačnih ljudi.',
+  hero_cta_tours: 'Pogledaj ture',
+  hero_cta_contact: 'Kontakt',
+  hero_available: 'Danas dostupna',
+  hero_profile_alt: 'Profil turističkog vodiča',
+  
+  // About Section
+  about_title: 'O meni',
+  about_text1: 'Već više od pet godina vodim ljude kroz svet putovanja, otkrivajući im mesta koja pričaju priče. Volim da istražujem, učim nove stvari i delim pozitivnu energiju sa svima koji žele da dožive nešto posebno.',
+  about_text2: 'Najviše me inspirišu destinacije sa dušom – one koje kriju ljubavne i misteriozne priče. Moj cilj je da vam pokažem ono što drugi često ne primete, da otkrijete magiju skrivenih kutaka i doživite autentična iskustva.',
+  about_text3: 'Sa mnom imate mogućnost da birate – zajedno kreiramo putovanje koje odgovara vašem stilu, željama i mašti. Krenimo zajedno u istraživanje i napravimo uspomene koje ćete zauvek pamtiti!',
+  about_subtitle: 'Putuj drugačije, doživi više!',
+  about_text4: 'Ja sam visegodisnji Vodic sa iskustvom u radu sa grupama svih uzrasta i željom da svako putovanje pretvorim u nezaboravnu avanturu.',
+  about_skills_title: 'Zašto baš sa mnom?',
+  about_skill1: 'Iskustvo i znanje – Više godina u turizmu, od recepcije u luksuznim hotelima do vođenja grupa po najlepšim mestima',
+  about_skill2: 'Prilagođeno vama – Svaka tura je jedinstvena i osmišljena prema vašim željama.',
+  about_skill3: 'Priče koje se pamte – Ne samo činjenice, već i legende, mitovi i zanimljivosti koje čine destinaciju živom.',
+  about_skill4: 'Sigurnost i organizacija – Sa mnom nema brige, samo uživanje.',
+  about_photo_alt: 'About Me Photo',
+  
+  // Tours Section
+  tours_title: 'Moje ture',
+  tours_subtitle: 'Izaberite između pažljivo osmišljenih kategorija tura, od kojih svaka nudi jedinstvena iskustva prilagođena različitim interesovanjima i preferencijama.',
+  tours_love_name: 'Ljubavne ture',
+  tours_love_desc: 'Kreirajte nezaboravne romantične uspomene kroz posebno osmišljene ture',
+  tours_monastery_name: 'Manastirske ture',
+  tours_monastery_desc: 'Otkrijte duhovno nasleđe i mirnu lepotu drevnih manastira',
+  tours_city_name: 'Gradske i istorijske ture',
+  tours_city_desc: 'Putovanje kroz vreme uz bogatu istoriju i arhitektonska remek-dela',
+  tours_custom_name: 'Prilagođene ture',
+  tours_custom_desc: 'Kreirajte savršeno iskustvo ture prilagođeno vašim interesovanjima i terminu',
+  tours_cta: 'Pogledaj dostupne ture',
+  
+  // Gallery Section
+  gallery_title: 'Galerija',
+  gallery_nature: 'Nature & Landscapes',
+  gallery_city: 'City & Architecture',
+  gallery_culture: 'Culture & People',
+  gallery_food: 'Food & Cuisine',
+  
+  // Testimonials Section
+  testimonials_title: 'Utisci',
+  testimonial1_name: 'Anna, DE',
+  testimonial1_text: 'Wonderful tour, felt safe and inspired. Highly recommend!',
+  testimonial2_name: 'Sofia, IT',
+  testimonial2_text: 'Amazing experience! Learned so much about local culture and history.',
+  testimonial3_name: 'Maya, IL',
+  testimonial3_text: 'Perfect day trip! The guide was knowledgeable and friendly.',
+  
+  // Contact Section
+  contact_title: 'Kontakt',
+  contact_name_label: 'Ime',
+  contact_name_placeholder: 'Vaše ime',
+  contact_email_label: 'E-mail',
+  contact_email_placeholder: 'vi@primer.com',
+  contact_message_label: 'Poruka',
+  contact_message_placeholder: 'Napišite mi o vašem putovanju...',
+  contact_submit: 'Pošalji',
+  contact_email_title: 'E-mail',
+  contact_instagram_title: 'Instagram',
+  contact_whatsapp_title: 'WhatsApp',
+  contact_response_title: 'Vreme odgovora',
+  contact_response_text: 'Obično u roku od 2 sata',
+  
+  // Footer
+  footer_company: 'VINS Turistički vodič',
+  footer_description: 'Profesionalne vođene ture i putnička iskustva. Otkrijte skrivene dragulje, bogatu istoriju i autentičnu lokalnu kulturu uz naše stručne vodiče.',
+  footer_company_info: 'Kompanija: VINS Turističke Usluge',
+  footer_pib: 'PIB: 123456789',
+  footer_registration: 'Registracija: 123456/2024',
+  footer_address: 'Adresa: Beograd, Srbija',
+  footer_contact_title: 'Kontakt',
+  footer_email: 'E-mail: info@vins-guide.com',
+  footer_phone: 'Telefon: +381 11 123 4567',
+  footer_whatsapp: 'WhatsApp: +381 60 123 4567',
+  footer_instagram: 'Instagram: @vins.guide',
+  footer_facebook: 'Facebook: VINS Turistički vodič',
+  footer_legal_title: 'Pravna dokumenta',
+  footer_terms: 'Uslovi korišćenja',
+  footer_privacy: 'Politika privatnosti',
+  footer_cookies: 'Politika kolačića',
+  footer_copyright: '© 2025 VINS Turistički vodič. Sva prava zadržana.',
+  footer_terms_title: 'Uslovi korišćenja',
+  footer_privacy_title: 'Politika privatnosti',
+  footer_back_to_site: 'Nazad na sajt',
+  
+  // Terms & Conditions
+  terms_acceptance_title: '1. Prihvatanje uslova',
+  terms_acceptance_text: 'Korišćenjem usluga VINS Turističkog vodiča prihvatate i slažete se sa uslovima ove saglasnosti. Ako se ne slažete sa navedenim, molimo ne koristite ovu uslugu.',
+  terms_service_title: '2. Opis usluge',
+  terms_service_text: 'VINS Turistički vodič pruža profesionalne vođene ture, planiranje putovanja i turističke usluge. Naše usluge uključuju, između ostalog, gradske ture, izlete u prirodu, istorijske ture i prilagođena turistička iskustva.',
+  terms_booking_title: '3. Rezervacije i otkazivanje',
+  terms_booking_text: 'Sve rezervacije moraju biti potvrđene unapred. Otkazivanja izvršena 24 sata pre ture imaju pravo na pun povraćaj. Otkazivanja kraća od 24 sata pre ture ne podležu povraćaju.',
+  terms_safety_title: '4. Bezbednost i odgovornost',
+  terms_safety_text: 'Iako nam je vaša bezbednost prioritet, učesnici prihvataju da aktivnosti na otvorenom nose određene rizike. VINS Turistički vodič ne snosi odgovornost za lične povrede, štetu na imovini ili druge gubitke tokom tura.',
+  terms_changes_title: '5. Promene i izmene',
+  terms_changes_text: 'Zadržavamo pravo izmene ili otkazivanja tura zbog vremenskih uslova, bezbednosnih razloga ili drugih nepredviđenih okolnosti. U takvim slučajevima biće obezbeđene alternativne opcije ili pun povraćaj.',
+  
+  // Privacy Policy
+  privacy_info_title: '1. Informacije koje prikupljamo',
+  privacy_info_text: 'Prikupljamo informacije koje nam direktno pružite, poput rezervacije ture, kontakt forme ili prijave na newsletter. To može uključivati vaše ime, e-mail, broj telefona i putne preferencije.',
+  privacy_usage_title: '2. Kako koristimo informacije',
+  privacy_usage_text: 'Koristimo prikupljene informacije kako bismo pružili, održavali i unapređivali naše usluge, komunicirali sa vama o turama i novostima i osigurali bezbednost i kvalitet iskustva.',
+  privacy_sharing_title: '3. Deljenje informacija',
+  privacy_sharing_text: 'Ne prodajemo, ne razmenjujemo niti na drugi način ne prenosimo vaše lične podatke trećim stranama bez vašeg pristanka, osim ako je to zakonom zahtevano ili potrebno za pružanje usluga.',
+  privacy_security_title: '4. Bezbednost podataka',
+  privacy_security_text: 'Primenujemo odgovarajuće bezbednosne mere radi zaštite vaših ličnih podataka od neovlašćenog pristupa, izmene, otkrivanja ili uništenja.',
+  privacy_rights_title: '5. Vaša prava',
+  privacy_rights_text: 'Imate pravo da pristupite, ispravite ili obrišete svoje lične podatke. Takođe se možete odjaviti od marketinških komunikacija u bilo kom trenutku.',
+  privacy_cookies_title: '6. Kolačići i praćenje',
+  privacy_cookies_text: 'Koristimo kolačiće i slične tehnologije kako bismo poboljšali vaše iskustvo, analizirali saobraćaj na sajtu i razumeli odakle dolaze posetioci.',
+};
+export default sr;

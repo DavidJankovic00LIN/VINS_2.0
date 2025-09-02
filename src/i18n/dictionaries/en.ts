@@ -1,0 +1,127 @@
+const en = {
+  // Brand
+  brand: 'Maja Tours',
+  
+  // Navigation
+  nav_about: 'About',
+  nav_gallery: 'Gallery',
+  nav_tours: 'Tours',
+  nav_testimonials: 'Testimonials',
+  nav_contact: 'Contact',
+  nav_language: 'Select Language',
+  
+  // Hero Section
+  hero_title: "Don't collect things, collect memories.",
+  hero_subtitle: 'I am Maja, your licensed tour guide through Serbia – a land of rich history, untouched nature, authentic flavors and warm people.',
+  hero_cta_tours: 'View tours',
+  hero_cta_contact: 'Contact',
+  hero_available: 'Available Today',
+  hero_profile_alt: 'Tour guide profile',
+  
+  // About Section
+  about_title: 'About Me',
+  about_text1: 'For more than five years I have been leading people through the world of travel, revealing to them places that tell stories. I love to explore, learn new things and share positive energy with everyone who wants to experience something special.',
+  about_text2: 'I am most inspired by destinations with soul – those that hide love and mysterious stories. My goal is to show you what others often don\'t notice, to discover the magic of hidden corners and experience authentic experiences.',
+  about_text3: 'With me you have the opportunity to choose – together we create a journey that suits your style, desires and imagination. Let\'s explore together and make memories you will remember forever!',
+  about_subtitle: 'Travel differently, experience more!',
+  about_text4: 'I am an experienced guide with experience working with groups of all ages and the desire to turn every journey into an unforgettable adventure.',
+  about_skills_title: 'Why choose me?',
+  about_skill1: 'Experience and knowledge – Years in tourism, from hotel reception to leading groups to the most beautiful places',
+  about_skill2: 'Tailored to you – Every tour is unique and designed according to your wishes.',
+  about_skill3: 'Memorable stories – Not just facts, but legends, myths and interesting details that make the destination come alive.',
+  about_skill4: 'Safety and organization – With me there is no worry, just enjoyment.',
+  about_photo_alt: 'About Me Photo',
+  
+  // Tours Section
+  tours_title: 'My Tours',
+  tours_subtitle: 'Choose from carefully designed tour categories, each offering unique experiences tailored to different interests and preferences.',
+  tours_love_name: 'Love Tours',
+  tours_love_desc: 'Create unforgettable romantic memories through specially designed tours',
+  tours_monastery_name: 'Monastery Tours',
+  tours_monastery_desc: 'Discover the spiritual heritage and peaceful beauty of ancient monasteries',
+  tours_city_name: 'City & History Tours',
+  tours_city_desc: 'Journey through time with rich history and architectural masterpieces',
+  tours_custom_name: 'Custom Tours',
+  tours_custom_desc: 'Create the perfect tour experience tailored to your interests and schedule',
+  tours_cta: 'View available tours',
+  
+  // Gallery Section
+  gallery_title: 'Gallery',
+  gallery_nature: 'Nature & Landscapes',
+  gallery_city: 'City & Architecture',
+  gallery_culture: 'Culture & People',
+  gallery_food: 'Food & Cuisine',
+  
+  // Testimonials Section
+  testimonials_title: 'Testimonials',
+  testimonial1_name: 'Anna, DE',
+  testimonial1_text: 'Wonderful tour, felt safe and inspired. Highly recommend!',
+  testimonial2_name: 'Sofia, IT',
+  testimonial2_text: 'Amazing experience! Learned so much about local culture and history.',
+  testimonial3_name: 'Maya, IL',
+  testimonial3_text: 'Perfect day trip! The guide was knowledgeable and friendly.',
+  
+  // Contact Section
+  contact_title: 'Contact',
+  contact_name_label: 'Name',
+  contact_name_placeholder: 'Your name',
+  contact_email_label: 'E-mail',
+  contact_email_placeholder: 'you@example.com',
+  contact_message_label: 'Message',
+  contact_message_placeholder: 'Tell me about your journey...',
+  contact_submit: 'Send',
+  contact_email_title: 'E-mail',
+  contact_instagram_title: 'Instagram',
+  contact_whatsapp_title: 'WhatsApp',
+  contact_response_title: 'Response time',
+  contact_response_text: 'Usually within 2 hours',
+  
+  // Footer
+  footer_company: 'VINS Tourist Guide',
+  footer_description: 'Professional guided tours and travel experiences. Discover hidden gems, rich history and authentic local culture with our expert guides.',
+  footer_company_info: 'Company: VINS Tourist Services',
+  footer_pib: 'Tax ID: 123456789',
+  footer_registration: 'Registration: 123456/2024',
+  footer_address: 'Address: Belgrade, Serbia',
+  footer_contact_title: 'Contact',
+  footer_email: 'E-mail: info@vins-guide.com',
+  footer_phone: 'Phone: +381 11 123 4567',
+  footer_whatsapp: 'WhatsApp: +381 60 123 4567',
+  footer_instagram: 'Instagram: @vins.guide',
+  footer_facebook: 'Facebook: VINS Tourist Guide',
+  footer_legal_title: 'Legal Documents',
+  footer_terms: 'Terms of Service',
+  footer_privacy: 'Privacy Policy',
+  footer_cookies: 'Cookie Policy',
+  footer_copyright: '© 2025 VINS Tourist Guide. All rights reserved.',
+  footer_terms_title: 'Terms of Service',
+  footer_privacy_title: 'Privacy Policy',
+  footer_back_to_site: 'Back to site',
+  
+  // Terms & Conditions
+  terms_acceptance_title: '1. Acceptance of Terms',
+  terms_acceptance_text: 'By using VINS Tourist Guide services, you accept and agree to the terms of this agreement. If you do not agree to the above, please do not use this service.',
+  terms_service_title: '2. Service Description',
+  terms_service_text: 'VINS Tourist Guide provides professional guided tours, travel planning and tourist services. Our services include, among others, city tours, nature excursions, historical tours and customized tourist experiences.',
+  terms_booking_title: '3. Bookings and Cancellations',
+  terms_booking_text: 'All bookings must be confirmed in advance. Cancellations made 24 hours before the tour are entitled to a full refund. Cancellations less than 24 hours before the tour are not subject to refund.',
+  terms_safety_title: '4. Safety and Responsibility',
+  terms_safety_text: 'Although your safety is our priority, participants accept that outdoor activities carry certain risks. VINS Tourist Guide is not responsible for personal injuries, property damage or other losses during tours.',
+  terms_changes_title: '5. Changes and Modifications',
+  terms_changes_text: 'We reserve the right to modify or cancel tours due to weather conditions, safety reasons or other unforeseen circumstances. In such cases, alternative options or full refund will be provided.',
+  
+  // Privacy Policy
+  privacy_info_title: '1. Information We Collect',
+  privacy_info_text: 'We collect information that you provide directly to us, such as tour booking, contact form or newsletter subscription. This may include your name, email, phone number and travel preferences.',
+  privacy_usage_title: '2. How We Use Information',
+  privacy_usage_text: 'We use the collected information to provide, maintain and improve our services, communicate with you about tours and news, and ensure safety and quality of experience.',
+  privacy_sharing_title: '3. Information Sharing',
+  privacy_sharing_text: 'We do not sell, exchange or otherwise transfer your personal data to third parties without your consent, except as required by law or necessary to provide services.',
+  privacy_security_title: '4. Data Security',
+  privacy_security_text: 'We implement appropriate security measures to protect your personal data from unauthorized access, modification, disclosure or destruction.',
+  privacy_rights_title: '5. Your Rights',
+  privacy_rights_text: 'You have the right to access, correct or delete your personal data. You can also unsubscribe from marketing communications at any time.',
+  privacy_cookies_title: '6. Cookies and Tracking',
+  privacy_cookies_text: 'We use cookies and similar technologies to improve your experience, analyze website traffic and understand where visitors come from.',
+};
+export default en;

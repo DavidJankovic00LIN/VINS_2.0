@@ -1,23 +1,27 @@
+'use client';
+
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import { testimonial1, testimonial2, testimonial3 } from '@/photos';
+import { useI18n } from '@/i18n/I18nProvider';
 
 export default function Testimonials() {
+  const { t } = useI18n();
   const testimonials = [
     {
-      name: 'Anna, DE',
+      name: t('testimonial1_name'),
       photo: testimonial1,
-      text: 'Wonderful tour, felt safe and inspired. Highly recommend!'
+      text: t('testimonial1_text')
     },
     {
-      name: 'Sofia, IT',
+      name: t('testimonial2_name'),
       photo: testimonial2, 
-      text: 'Amazing experience! Learned so much about local culture and history.'
+      text: t('testimonial2_text')
     },
     {
-      name: 'Maya, IL',
+      name: t('testimonial3_name'),
       photo: testimonial3,
-      text: 'Perfect day trip! The guide was knowledgeable and friendly.'
+      text: t('testimonial3_text')
     }
   ];
 
@@ -27,7 +31,7 @@ export default function Testimonials() {
     <section id="testimonials" className="bg-gradient-to-b from-[#0085ca] to-[#fd8112]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <AnimatedSection direction="fade">
-          <h2 className="text-3xl font-semibold tracking-tight text-white">Utisci</h2>
+          <h2 className="text-3xl font-semibold tracking-tight text-white">{t('testimonials_title')}</h2>
         </AnimatedSection>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, idx) => (

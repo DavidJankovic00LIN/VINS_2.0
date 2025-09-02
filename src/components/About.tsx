@@ -1,14 +1,17 @@
+'use client';
+
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import { aboutPhoto } from '@/photos';
+import { useI18n } from '@/i18n/I18nProvider';
 
 export default function About() {
+  const { t } = useI18n();
   const skills = [
-    'Iskustvo i znanje – Više godina u turizmu, od recepcije u luksuznim hotelima do vođenja grupa po najlepšim mestima',
-    'Prilagođeno vama – Svaka tura je jedinstvena i osmišljena prema vašim željama.', 
-    'Priče koje se pamte – Ne samo činjenice, već i legende, mitovi i zanimljivosti koje čine destinaciju živom.',
-    'Sigurnost i organizacija – Sa mnom nema brige, samo uživanje.',
-    
+    t('about_skill1'),
+    t('about_skill2'), 
+    t('about_skill3'),
+    t('about_skill4'),
   ];
 
   const getSkillIcon = (text: string) => {
@@ -24,23 +27,20 @@ export default function About() {
     <section id="about" className="bg-gradient-to-b from-[#0085ca] to-[#fd8112] dark:bg-white/[.04]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <AnimatedSection direction="fade">
-          <h2 className="text-3xl font-semibold tracking-tight text-white">O meni</h2>
+          <h2 className="text-3xl font-semibold tracking-tight text-white">{t('about_title')}</h2>
         </AnimatedSection>
         
         <div className="mt-8 grid lg:grid-cols-2 gap-12 items-start">
           {/* Text Content */}
           <AnimatedSection direction="left" className="space-y-4">
             <p className="text-base sm:text-lg text-white/90">
-            Već više od pet godina vodim ljude kroz svet putovanja, otkrivajući im mesta koja pričaju priče. Volim da istražujem, učim nove stvari i delim pozitivnu energiju sa svima koji žele da dožive nešto posebno.
-            Najviše me inspirišu destinacije sa dušom – one koje kriju ljubavne i misteriozne priče. Moj cilj je da vam pokažem ono što drugi često ne primete, da otkrijete magiju skrivenih kutaka i doživite autentična iskustva.
-            Sa mnom imate mogućnost da birate – zajedno kreiramo putovanje koje odgovara vašem stilu, željama i mašti. Krenimo zajedno u istraživanje i napravimo uspomene koje ćete zauvek pamtiti!
-
+              {t('about_text1')} {t('about_text2')} {t('about_text3')}
             </p>
 
-            <h3 className="text-2xl font-semibold tracking-tight text-white">Putuj drugačije, doživi više!</h3>
+            <h3 className="text-2xl font-semibold tracking-tight text-white">{t('about_subtitle')}</h3>
 
             <p className="text-base sm:text-lg text-white/90">
-            Ja sam visegodisnji Vodic sa iskustvom u radu sa grupama svih uzrasta i željom da svako putovanje pretvorim u nezaboravnu avanturu.
+              {t('about_text4')}
             </p>
             
           </AnimatedSection>
@@ -51,7 +51,7 @@ export default function About() {
               <div className="w-64 h-80 sm:w-80 sm:h-96 rounded-xl overflow-hidden border-4 border-white shadow-2xl">
                 <Image
                   src={aboutPhoto}
-                  alt="About Me Photo"
+                  alt={t('about_photo_alt')}
                   width={320}
                   height={400}
                   className="w-full h-full object-cover"
@@ -63,7 +63,7 @@ export default function About() {
         
         {/* Skills Grid */}
         <AnimatedSection direction="fade">
-          <h3 className="text-3xl font-semibold tracking-tight text-white text-center mt-16">Zašto baš sa mnom?</h3>
+          <h3 className="text-3xl font-semibold tracking-tight text-white text-center mt-16">{t('about_skills_title')}</h3>
         </AnimatedSection>
         <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {skills.map((skill, idx) => (

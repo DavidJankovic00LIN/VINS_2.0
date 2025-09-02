@@ -1,30 +1,34 @@
+'use client';
+
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import { city1, nature1 } from '@/photos';
+import { useI18n } from '@/i18n/I18nProvider';
 
 export default function Tours() {
+  const { t } = useI18n();
   const tourCategories = {
     love: {
-      name: 'Ljubavne ture',
-      description: 'Kreirajte nezaboravne romantične uspomene kroz posebno osmišljene ture',
+      name: t('tours_love_name'),
+      description: t('tours_love_desc'),
       link: '/tours/love-tours',
       tourCount: 3
     },
     monastery: {
-      name: 'Manastirske ture',
-      description: 'Otkrijte duhovno nasleđe i mirnu lepotu drevnih manastira',
+      name: t('tours_monastery_name'),
+      description: t('tours_monastery_desc'),
       link: '/tours/monastery-tours',
       tourCount: 4
     },
     cityHistory: {
-      name: 'Gradske i istorijske ture',
-      description: 'Putovanje kroz vreme uz bogatu istoriju i arhitektonska remek-dela',
+      name: t('tours_city_name'),
+      description: t('tours_city_desc'),
       link: '/tours/city-history-tours',
       tourCount: 5
     },
     custom: {
-      name: 'Prilagođene ture',
-      description: 'Kreirajte savršeno iskustvo ture prilagođeno vašim interesovanjima i terminu',
+      name: t('tours_custom_name'),
+      description: t('tours_custom_desc'),
       link: '/tours/custom-tours',
       tourCount: 6
     }
@@ -41,10 +45,9 @@ export default function Tours() {
     <section id="tours" className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <AnimatedSection direction="fade">
-          <h2 className="text-3xl font-semibold tracking-tight text-white">Moje ture</h2>
+          <h2 className="text-3xl font-semibold tracking-tight text-white">{t('tours_title')}</h2>
           <p className="mt-3 text-base sm:text-lg max-w-3xl text-blue-200">
-            Izaberite između pažljivo osmišljenih kategorija tura, od kojih svaka nudi jedinstvena
-            iskustva prilagođena različitim interesovanjima i preferencijama.
+            {t('tours_subtitle')}
           </p>
         </AnimatedSection>
         
@@ -71,7 +74,7 @@ export default function Tours() {
                   <p className="text-sm text-blue-200 mb-4">{category.description}</p>
                 </div>
                 <div className="pt-2 mt-auto text-sm font-medium text-blue-300 group-hover:text-white transition-all">
-                  Pogledaj dostupne ture →
+                  {t('tours_cta')} →
                 </div>
               </a>
             </AnimatedSection>

@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useI18n } from '@/i18n/I18nProvider';
 
 export default function Footer() {
+  const { t } = useI18n();
   const [showTerms, setShowTerms] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
 
@@ -20,49 +22,48 @@ export default function Footer() {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="md:col-span-2">
-              <h3 className="text-lg font-semibold mb-4 text-white">VINS Turistički vodič</h3>
+              <h3 className="text-lg font-semibold mb-4 text-white">{t('footer_company')}</h3>
               <p className="text-sm text-blue-200 mb-4 max-w-md">
-                Profesionalne vođene ture i putnička iskustva. Otkrijte skrivene dragulje, 
-                bogatu istoriju i autentičnu lokalnu kulturu uz naše stručne vodiče.
+                {t('footer_description')}
               </p>
               <div className="space-y-2 text-sm text-blue-200">
-                <div>🏢 Kompanija: VINS Turističke Usluge</div>
-                <div>📋 PIB: 123456789</div>
-                <div>📄 Registracija: 123456/2024</div>
-                <div>📍 Adresa: Beograd, Srbija</div>
+                <div>🏢 {t('footer_company_info')}</div>
+                <div>📋 {t('footer_pib')}</div>
+                <div>📄 {t('footer_registration')}</div>
+                <div>📍 {t('footer_address')}</div>
               </div>
             </div>
 
             {/* Contact Info */}
             <div>
-              <h4 className="font-semibold mb-4 text-white">Kontakt</h4>
+              <h4 className="font-semibold mb-4 text-white">{t('footer_contact_title')}</h4>
               <div className="space-y-2 text-sm text-blue-200">
-                <div>📧 E-mail: info@vins-guide.com</div>
-                <div>📱 Telefon: +381 11 123 4567</div>
-                <div>📱 WhatsApp: +381 60 123 4567</div>
-                <div>📘 Instagram: @vins.guide</div>
-                <div>📘 Facebook: VINS Turistički vodič</div>
+                <div>📧 {t('footer_email')}</div>
+                <div>📱 {t('footer_phone')}</div>
+                <div>📱 {t('footer_whatsapp')}</div>
+                <div>📘 {t('footer_instagram')}</div>
+                <div>📘 {t('footer_facebook')}</div>
               </div>
             </div>
 
             {/* Legal Links */}
             <div>
-              <h4 className="font-semibold mb-4 text-white">Pravna dokumenta</h4>
+              <h4 className="font-semibold mb-4 text-white">{t('footer_legal_title')}</h4>
               <div className="space-y-2 text-sm">
                 <button
                   onClick={openTerms}
                   className="text-blue-200 hover:text-white transition-colors block"
                 >
-                  📋 Uslovi korišćenja
+                  📋 {t('footer_terms')}
                 </button>
                 <button
                   onClick={openPrivacy}
                   className="text-blue-200 hover:text-white transition-colors block"
                 >
-                  🔒 Politika privatnosti
+                  🔒 {t('footer_privacy')}
                 </button>
                 <div className="text-blue-200">
-                  🍪 Politika kolačića
+                  🍪 {t('footer_cookies')}
                 </div>
               </div>
             </div>
@@ -71,9 +72,10 @@ export default function Footer() {
           {/* Bottom Section */}
           <div className="mt-8 pt-8 border-t border-blue-500/20 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-sm text-blue-300">
-              © 2025 VINS Turistički vodič. Sva prava zadržana.
+              {t('footer_copyright')}
             </div>
             <div className="text-sm text-blue-300">
+              
             </div>
           </div>
         </div>
@@ -85,7 +87,7 @@ export default function Footer() {
           <div className="bg-background rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-background border-b border-black/[.08] dark:border-white/[.12] p-6">
               <div className="flex items-center justify-between">
-                <h2 className="text-2xl font-semibold">Uslovi korišćenja</h2>
+                <h2 className="text-2xl font-semibold">{t('footer_terms_title')}</h2>
                 <button
                   onClick={closeModals}
                   className="p-2 hover:bg-black/[.05] dark:hover:bg-white/[.05] rounded-lg transition-colors"
@@ -99,43 +101,37 @@ export default function Footer() {
             
             <div className="p-6 space-y-6">
               <div>
-                <h3 className="text-xl font-semibold mb-3">1. Prihvatanje uslova</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('terms_acceptance_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Korišćenjem usluga VINS Turističkog vodiča prihvatate i slažete se sa uslovima 
-                  ove saglasnosti. Ako se ne slažete sa navedenim, molimo ne koristite ovu uslugu.
+                  {t('terms_acceptance_text')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">2. Opis usluge</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('terms_service_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  VINS Turistički vodič pruža profesionalne vođene ture, planiranje putovanja i turističke usluge. 
-                  Naše usluge uključuju, između ostalog, gradske ture, izlete u prirodu, istorijske ture 
-                  i prilagođena turistička iskustva.
+                  {t('terms_service_text')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">3. Rezervacije i otkazivanje</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('terms_booking_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Sve rezervacije moraju biti potvrđene unapred. Otkazivanja izvršena 24 sata pre ture 
-                  imaju pravo na pun povraćaj. Otkazivanja kraća od 24 sata pre ture ne podležu povraćaju.
+                  {t('terms_booking_text')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">4. Bezbednost i odgovornost</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('terms_safety_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Iako nam je vaša bezbednost prioritet, učesnici prihvataju da aktivnosti na otvorenom nose određene rizike. 
-                  VINS Turistički vodič ne snosi odgovornost za lične povrede, štetu na imovini ili druge gubitke tokom tura.
+                  {t('terms_safety_text')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">5. Promene i izmene</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('terms_changes_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Zadržavamo pravo izmene ili otkazivanja tura zbog vremenskih uslova, bezbednosnih razloga 
-                  ili drugih nepredviđenih okolnosti. U takvim slučajevima biće obezbeđene alternativne opcije ili pun povraćaj.
+                  {t('terms_changes_text')}
                 </p>
               </div>
 
@@ -144,7 +140,7 @@ export default function Footer() {
                   onClick={closeModals}
                   className="inline-flex items-center justify-center w-full h-12 px-6 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium hover:from-blue-600 hover:to-indigo-600 transition-all shadow-lg"
                 >
-                  Nazad na sajt
+                  {t('footer_back_to_site')}
                 </button>
               </div>
             </div>
@@ -158,7 +154,7 @@ export default function Footer() {
           <div className="bg-background rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-background border-b border-black/[.08] dark:border-white/[.12] p-6">
               <div className="flex items-center justify-between">
-                <h2 className="text-2xl font-semibold">Politika privatnosti</h2>
+                <h2 className="text-2xl font-semibold">{t('footer_privacy_title')}</h2>
                 <button
                   onClick={closeModals}
                   className="p-2 hover:bg-black/[.05] dark:hover:bg-white/[.05] rounded-lg transition-colors"
@@ -172,51 +168,44 @@ export default function Footer() {
             
             <div className="p-6 space-y-6">
               <div>
-                <h3 className="text-xl font-semibold mb-3">1. Informacije koje prikupljamo</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('privacy_info_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Prikupljamo informacije koje nam direktno pružite, poput rezervacije ture, kontakt forme 
-                  ili prijave na newsletter. To može uključivati vaše ime, e-mail, broj telefona 
-                  i putne preferencije.
+                  {t('privacy_info_text')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">2. Kako koristimo informacije</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('privacy_usage_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Koristimo prikupljene informacije kako bismo pružili, održavali i unapređivali naše usluge, 
-                  komunicirali sa vama o turama i novostima i osigurali bezbednost i kvalitet iskustva.
+                  {t('privacy_usage_text')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">3. Deljenje informacija</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('privacy_sharing_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Ne prodajemo, ne razmenjujemo niti na drugi način ne prenosimo vaše lične podatke trećim stranama 
-                  bez vašeg pristanka, osim ako je to zakonom zahtevano ili potrebno za pružanje usluga.
+                  {t('privacy_sharing_text')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">4. Bezbednost podataka</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('privacy_security_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Primenujemo odgovarajuće bezbednosne mere radi zaštite vaših ličnih podataka od 
-                  neovlašćenog pristupa, izmene, otkrivanja ili uništenja.
+                  {t('privacy_security_text')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">5. Vaša prava</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('privacy_rights_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Imate pravo da pristupite, ispravite ili obrišete svoje lične podatke. 
-                  Takođe se možete odjaviti od marketinških komunikacija u bilo kom trenutku.
+                  {t('privacy_rights_text')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">6. Kolačići i praćenje</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('privacy_cookies_title')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Koristimo kolačiće i slične tehnologije kako bismo poboljšali vaše iskustvo, 
-                  analizirali saobraćaj na sajtu i razumeli odakle dolaze posetioci.
+                  {t('privacy_cookies_text')}
                 </p>
               </div>
 
@@ -225,7 +214,7 @@ export default function Footer() {
                   onClick={closeModals}
                   className="inline-flex items-center justify-center w-full h-12 px-6 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium hover:from-blue-600 hover:to-indigo-600 transition-all shadow-lg"
                 >
-                  Nazad na sajt
+                  {t('footer_back_to_site')}
                 </button>
               </div>
             </div>

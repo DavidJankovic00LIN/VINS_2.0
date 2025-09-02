@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
+import { useI18n } from '@/i18n/I18nProvider';
 import { 
   nature1, nature2, nature3, nature4, nature5, nature6, nature7, nature8,
   city1, city2, city3, city4, city5, city6, city7, city8,
@@ -11,11 +12,12 @@ import {
 } from '@/photos';
 
 export default function Gallery() {
+  const { t } = useI18n();
   const [selectedSet, setSelectedSet] = useState('nature');
 
   const photoSets = {
     nature: {
-      name: 'Nature & Landscapes',
+      name: t('gallery_nature'),
       photos: [
         { id: 1, src: nature1, title: 'Nature Photo 1', category: 'nature' },
         { id: 2, src: nature2, title: 'Nature Photo 2', category: 'nature' },
@@ -28,7 +30,7 @@ export default function Gallery() {
       ]
     },
     city: {
-      name: 'City & Architecture',
+      name: t('gallery_city'),
       photos: [
         { id: 1, src: city1, title: 'City Photo 1', category: 'city' },
         { id: 2, src: city2, title: 'City Photo 2', category: 'city' },
@@ -41,7 +43,7 @@ export default function Gallery() {
       ]
     },
     culture: {
-      name: 'Culture & People',
+      name: t('gallery_culture'),
       photos: [
         { id: 1, src: culture1, title: 'Culture Photo 1', category: 'culture' },
         { id: 2, src: culture2, title: 'Culture Photo 2', category: 'culture' },
@@ -54,7 +56,7 @@ export default function Gallery() {
       ]
     },
     food: {
-      name: 'Food & Cuisine',
+      name: t('gallery_food'),
       photos: [
         { id: 1, src: food1, title: 'Food Photo 1', category: 'food' },
         { id: 2, src: food2, title: 'Food Photo 2', category: 'food' },
@@ -74,7 +76,7 @@ export default function Gallery() {
     <section id="gallery" className="bg-gradient-to-b from-[#fd8112] to-[#0085ca]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <AnimatedSection direction="fade">
-          <h2 className="text-3xl font-semibold tracking-tight text-white">Galerija</h2>
+          <h2 className="text-3xl font-semibold tracking-tight text-white">{t('gallery_title')}</h2>
         </AnimatedSection>
         
         {/* Photo Set Selector */}

@@ -1,0 +1,127 @@
+const de = {
+  // Brand
+  brand: 'Maja Tours',
+  
+  // Navigation
+  nav_about: 'Über mich',
+  nav_gallery: 'Galerie',
+  nav_tours: 'Touren',
+  nav_testimonials: 'Bewertungen',
+  nav_contact: 'Kontakt',
+  nav_language: 'Sprache wählen',
+  
+  // Hero Section
+  hero_title: 'Sammle keine Dinge, sammle Erinnerungen.',
+  hero_subtitle: 'Ich bin Maja, Ihr lizenzierter Reiseführer durch Serbien – ein Land reicher Geschichte, unberührter Natur, authentischer Aromen und herzlicher Menschen.',
+  hero_cta_tours: 'Touren ansehen',
+  hero_cta_contact: 'Kontakt',
+  hero_available: 'Heute verfügbar',
+  hero_profile_alt: 'Reiseführer-Profil',
+  
+  // About Section
+  about_title: 'Über mich',
+  about_text1: 'Seit mehr als fünf Jahren führe ich Menschen durch die Welt des Reisens und zeige ihnen Orte, die Geschichten erzählen. Ich liebe es zu erkunden, neue Dinge zu lernen und positive Energie mit allen zu teilen, die etwas Besonderes erleben möchten.',
+  about_text2: 'Am meisten inspirieren mich Reiseziele mit Seele – solche, die Liebes- und geheimnisvolle Geschichten verbergen. Mein Ziel ist es, Ihnen zu zeigen, was andere oft nicht bemerken, die Magie versteckter Winkel zu entdecken und authentische Erfahrungen zu machen.',
+  about_text3: 'Mit mir haben Sie die Möglichkeit zu wählen – gemeinsam schaffen wir eine Reise, die zu Ihrem Stil, Ihren Wünschen und Ihrer Fantasie passt. Lassen Sie uns zusammen erkunden und Erinnerungen schaffen, die Sie für immer behalten werden!',
+  about_subtitle: 'Reise anders, erlebe mehr!',
+  about_text4: 'Ich bin ein erfahrener Reiseführer mit Erfahrung in der Arbeit mit Gruppen aller Altersgruppen und dem Wunsch, jede Reise zu einem unvergesslichen Abenteuer zu machen.',
+  about_skills_title: 'Warum mich wählen?',
+  about_skill1: 'Erfahrung und Wissen – Jahre im Tourismus, von der Hotelrezeption bis zur Führung von Gruppen zu den schönsten Orten',
+  about_skill2: 'Auf Sie zugeschnitten – Jede Tour ist einzigartig und nach Ihren Wünschen gestaltet.',
+  about_skill3: 'Unvergessliche Geschichten – Nicht nur Fakten, sondern Legenden, Mythen und interessante Details, die das Reiseziel zum Leben erwecken.',
+  about_skill4: 'Sicherheit und Organisation – Mit mir gibt es keine Sorgen, nur Vergnügen.',
+  about_photo_alt: 'Über mich Foto',
+  
+  // Tours Section
+  tours_title: 'Meine Touren',
+  tours_subtitle: 'Wählen Sie aus sorgfältig gestalteten Tourkategorien, die jeweils einzigartige Erlebnisse bieten, die auf verschiedene Interessen und Vorlieben zugeschnitten sind.',
+  tours_love_name: 'Liebestouren',
+  tours_love_desc: 'Schaffen Sie unvergessliche romantische Erinnerungen durch speziell gestaltete Touren',
+  tours_monastery_name: 'Kloster-Touren',
+  tours_monastery_desc: 'Entdecken Sie das spirituelle Erbe und die friedliche Schönheit alter Klöster',
+  tours_city_name: 'Stadt- und Geschichtstouren',
+  tours_city_desc: 'Reise durch die Zeit mit reicher Geschichte und architektonischen Meisterwerken',
+  tours_custom_name: 'Individuelle Touren',
+  tours_custom_desc: 'Schaffen Sie das perfekte Tourenerlebnis, das auf Ihre Interessen und Ihren Zeitplan zugeschnitten ist',
+  tours_cta: 'Verfügbare Touren ansehen',
+  
+  // Gallery Section
+  gallery_title: 'Galerie',
+  gallery_nature: 'Natur & Landschaften',
+  gallery_city: 'Stadt & Architektur',
+  gallery_culture: 'Kultur & Menschen',
+  gallery_food: 'Essen & Küche',
+  
+  // Testimonials Section
+  testimonials_title: 'Bewertungen',
+  testimonial1_name: 'Anna, DE',
+  testimonial1_text: 'Wunderbare Tour, fühlte mich sicher und inspiriert. Sehr empfehlenswert!',
+  testimonial2_name: 'Sofia, IT',
+  testimonial2_text: 'Erstaunliche Erfahrung! Habe so viel über lokale Kultur und Geschichte gelernt.',
+  testimonial3_name: 'Maya, IL',
+  testimonial3_text: 'Perfekter Tagesausflug! Der Reiseführer war sachkundig und freundlich.',
+  
+  // Contact Section
+  contact_title: 'Kontakt',
+  contact_name_label: 'Name',
+  contact_name_placeholder: 'Ihr Name',
+  contact_email_label: 'E-Mail',
+  contact_email_placeholder: 'sie@beispiel.com',
+  contact_message_label: 'Nachricht',
+  contact_message_placeholder: 'Erzählen Sie mir von Ihrer Reise...',
+  contact_submit: 'Senden',
+  contact_email_title: 'E-Mail',
+  contact_instagram_title: 'Instagram',
+  contact_whatsapp_title: 'WhatsApp',
+  contact_response_title: 'Antwortzeit',
+  contact_response_text: 'Normalerweise innerhalb von 2 Stunden',
+  
+  // Footer
+  footer_company: 'VINS Reiseführer',
+  footer_description: 'Professionelle geführte Touren und Reiseerlebnisse. Entdecken Sie versteckte Juwelen, reiche Geschichte und authentische lokale Kultur mit unseren Expertenführern.',
+  footer_company_info: 'Unternehmen: VINS Reisedienstleistungen',
+  footer_pib: 'Steuer-ID: 123456789',
+  footer_registration: 'Registrierung: 123456/2024',
+  footer_address: 'Adresse: Belgrad, Serbien',
+  footer_contact_title: 'Kontakt',
+  footer_email: 'E-Mail: info@vins-guide.com',
+  footer_phone: 'Telefon: +381 11 123 4567',
+  footer_whatsapp: 'WhatsApp: +381 60 123 4567',
+  footer_instagram: 'Instagram: @vins.guide',
+  footer_facebook: 'Facebook: VINS Reiseführer',
+  footer_legal_title: 'Rechtsdokumente',
+  footer_terms: 'Nutzungsbedingungen',
+  footer_privacy: 'Datenschutzrichtlinie',
+  footer_cookies: 'Cookie-Richtlinie',
+  footer_copyright: '© 2025 VINS Reiseführer. Alle Rechte vorbehalten.',
+  footer_terms_title: 'Nutzungsbedingungen',
+  footer_privacy_title: 'Datenschutzrichtlinie',
+  footer_back_to_site: 'Zurück zur Website',
+  
+  // Terms & Conditions
+  terms_acceptance_title: '1. Annahme der Bedingungen',
+  terms_acceptance_text: 'Durch die Nutzung der VINS Reiseführer-Dienste akzeptieren und stimmen Sie den Bedingungen dieser Vereinbarung zu. Wenn Sie mit dem oben Genannten nicht einverstanden sind, verwenden Sie bitte diesen Dienst nicht.',
+  terms_service_title: '2. Dienstbeschreibung',
+  terms_service_text: 'VINS Reiseführer bietet professionelle geführte Touren, Reiseplanung und touristische Dienstleistungen. Unsere Dienstleistungen umfassen unter anderem Stadtführungen, Naturausflüge, historische Touren und maßgeschneiderte touristische Erlebnisse.',
+  terms_booking_title: '3. Buchungen und Stornierungen',
+  terms_booking_text: 'Alle Buchungen müssen im Voraus bestätigt werden. Stornierungen, die 24 Stunden vor der Tour vorgenommen werden, haben Anspruch auf eine vollständige Rückerstattung. Stornierungen weniger als 24 Stunden vor der Tour unterliegen keiner Rückerstattung.',
+  terms_safety_title: '4. Sicherheit und Verantwortung',
+  terms_safety_text: 'Obwohl Ihre Sicherheit unsere Priorität ist, akzeptieren die Teilnehmer, dass Aktivitäten im Freien bestimmte Risiken bergen. VINS Reiseführer ist nicht verantwortlich für persönliche Verletzungen, Sachschäden oder andere Verluste während der Touren.',
+  terms_changes_title: '5. Änderungen und Modifikationen',
+  terms_changes_text: 'Wir behalten uns das Recht vor, Touren aufgrund von Wetterbedingungen, Sicherheitsgründen oder anderen unvorhergesehenen Umständen zu ändern oder zu stornieren. In solchen Fällen werden alternative Optionen oder eine vollständige Rückerstattung bereitgestellt.',
+  
+  // Privacy Policy
+  privacy_info_title: '1. Informationen, die wir sammeln',
+  privacy_info_text: 'Wir sammeln Informationen, die Sie uns direkt zur Verfügung stellen, wie z.B. Tourbuchung, Kontaktformular oder Newsletter-Anmeldung. Dies kann Ihren Namen, Ihre E-Mail, Ihre Telefonnummer und Ihre Reisevorlieben umfassen.',
+  privacy_usage_title: '2. Wie wir Informationen verwenden',
+  privacy_usage_text: 'Wir verwenden die gesammelten Informationen, um unsere Dienstleistungen zu erbringen, zu erhalten und zu verbessern, mit Ihnen über Touren und Neuigkeiten zu kommunizieren und Sicherheit und Qualität der Erfahrung zu gewährleisten.',
+  privacy_sharing_title: '3. Informationsaustausch',
+  privacy_sharing_text: 'Wir verkaufen, tauschen oder übertragen Ihre persönlichen Daten nicht an Dritte ohne Ihre Zustimmung, es sei denn, dies ist gesetzlich vorgeschrieben oder für die Erbringung von Dienstleistungen erforderlich.',
+  privacy_security_title: '4. Datensicherheit',
+  privacy_security_text: 'Wir wenden angemessene Sicherheitsmaßnahmen an, um Ihre persönlichen Daten vor unbefugtem Zugriff, Änderung, Offenlegung oder Zerstörung zu schützen.',
+  privacy_rights_title: '5. Ihre Rechte',
+  privacy_rights_text: 'Sie haben das Recht, auf Ihre persönlichen Daten zuzugreifen, sie zu korrigieren oder zu löschen. Sie können sich auch jederzeit von Marketing-Kommunikationen abmelden.',
+  privacy_cookies_title: '6. Cookies und Tracking',
+  privacy_cookies_text: 'Wir verwenden Cookies und ähnliche Technologien, um Ihre Erfahrung zu verbessern, Website-Traffic zu analysieren und zu verstehen, woher Besucher kommen.',
+};
+export default de;

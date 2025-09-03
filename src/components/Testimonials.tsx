@@ -42,7 +42,7 @@ export default function Testimonials() {
                 </div>
                 <div className="text-sm font-medium text-white">{testimonial.name}</div>
               </div>
-              <p className="mt-3 text-sm text-white/90">"{testimonial.text}"</p>
+              <p className="mt-3 text-sm text-white/90">&ldquo;{testimonial.text}&rdquo;</p>
 
               <div className="mt-4 rounded-lg overflow-hidden border border-white/30">
                 <Image

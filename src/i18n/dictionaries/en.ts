@@ -44,6 +44,8 @@ const en = {
   tours_custom_name: 'Custom Tours',
   tours_custom_desc: 'Create the perfect tour experience tailored to your interests and schedule',
   tours_cta: 'View available tours',
+  tours_book_button: 'Book This Tour',
+  tours_read_more: 'Read more',
   
   // Gallery Section
   gallery_title: 'Gallery',
@@ -123,5 +125,34 @@ const en = {
   privacy_rights_text: 'You have the right to access, correct or delete your personal data. You can also unsubscribe from marketing communications at any time.',
   privacy_cookies_title: '6. Cookies and Tracking',
   privacy_cookies_text: 'We use cookies and similar technologies to improve your experience, analyze website traffic and understand where visitors come from.',
+  
+  // Tour pages common
+  tour_duration: 'Duration',
+  tour_price: 'Price',
+  tour_highlights: 'Highlights:',
+  tour_details_notes: 'Details and notes:',
+  tour_learn_title: 'On this tour you will learn:',
+  tour_why_title: "Why you shouldn't miss it?",
+  tour_expect_title: 'What to expect:',
+  tour_pack_title: 'Bring with you:',
+  
+  // Love Tours page
+  love_title: 'Tours for couples – the perfect gift and unforgettable experience',
+  love_intro_1: 'Want to surprise your partner for an anniversary, birthday or special moment? A trip for two is the perfect choice – the best gift that remains in memory forever!',
+  love_intro_2: 'These tours are created to provide a romantic atmosphere, intimacy and unique experiences – from walks through historic streets and spiritual monasteries, to boat rides at sunset or wine tastings in hidden corners of Serbia.',
+  love_intro_3: 'With a private tour for couples, everything is tailored to you: pace, destinations, duration and details that make your journey perfect and unforgettable.',
+  // Monastery Tours hero
+  monastery_title: 'Monastery Tours',
+  monastery_intro: 'Discover the spiritual heritage and peaceful beauty of ancient monasteries. Experience centuries of tradition, architecture, and spiritual wisdom.',
+
+  // City & History Tours hero
+  city_title: 'City & History Tours',
+  city_intro: "Journey through time and discover the rich history, culture, and architectural marvels that have shaped this beautiful city and region.",
+
+  // Common section titles
+  section_spiritual_journeys: 'Spiritual Journeys',
+  section_historical_adventures: 'Historical Adventures',
+  section_love_tours: 'Love Tours',
+  section_love_tours_sub: 'Each tour is designed to create special moments and unforgettable memories.',
 };
 export default en;

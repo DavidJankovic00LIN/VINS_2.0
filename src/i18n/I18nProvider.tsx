@@ -3,9 +3,8 @@ import { createContext, useContext, useEffect, useMemo, useState, PropsWithChild
 import sr from './dictionaries/sr';
 import en from './dictionaries/en';
 import tr from './dictionaries/tr';
-import de from './dictionaries/de';
 
-type Lang = 'SRB' | 'ENG' | 'TUR' | 'DEU';
+type Lang = 'SRB' | 'ENG' | 'TUR';
 
 type Dict = Record<string, string>;
 
@@ -13,7 +12,6 @@ const DICTS: Record<Lang, Dict> = {
   SRB: sr,
   ENG: en,
   TUR: tr,
-  DEU: de,
 };
 
 interface I18nContextValue {
@@ -29,7 +27,7 @@ export function I18nProvider({ children }: PropsWithChildren) {
 
   useEffect(() => {
     const stored = typeof window !== 'undefined' ? (localStorage.getItem('lang') as Lang | null) : null;
-    if (stored && (stored === 'SRB' || stored === 'ENG' || stored === 'TUR' || stored === 'DEU')) setLang(stored);
+    if (stored && (stored === 'SRB' || stored === 'ENG' || stored === 'TUR')) setLang(stored);
   }, []);
 
   const setLanguage = (l: Lang) => {

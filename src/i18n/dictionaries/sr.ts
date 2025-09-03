@@ -44,6 +44,8 @@ const sr = {
   tours_custom_name: 'Prilagođene ture',
   tours_custom_desc: 'Kreirajte savršeno iskustvo ture prilagođeno vašim interesovanjima i terminu',
   tours_cta: 'Pogledaj dostupne ture',
+  tours_book_button: 'Rezerviši turu',
+  tours_read_more: 'Pročitaj više',
   
   // Gallery Section
   gallery_title: 'Galerija',
@@ -123,5 +125,38 @@ const sr = {
   privacy_rights_text: 'Imate pravo da pristupite, ispravite ili obrišete svoje lične podatke. Takođe se možete odjaviti od marketinških komunikacija u bilo kom trenutku.',
   privacy_cookies_title: '6. Kolačići i praćenje',
   privacy_cookies_text: 'Koristimo kolačiće i slične tehnologije kako bismo poboljšali vaše iskustvo, analizirali saobraćaj na sajtu i razumeli odakle dolaze posetioci.',
+  
+  // Tour pages common
+  tour_duration: 'Trajanje',
+  tour_price: 'Cena',
+  tour_highlights: 'Izdvajamo:',
+  tour_details_notes: 'Detalji i napomene:',
+  tour_learn_title: 'Na ovoj turi saznaćete:',
+  tour_why_title: 'Zašto ne smete propustiti?',
+  tour_expect_title: 'Šta vas očekuje:',
+  tour_pack_title: 'Ponesite:',
+  
+  // Love Tours page
+  love_title: 'Ture za parove – savršen poklon i nezaboravno iskustvo',
+  love_intro_1: 'Želite da iznenadite svog partnera ili partnerku za godišnjicu, rođendan ili poseban trenutak? Putovanje za dvoje je savršen izbor – najbolji poklon koji ostaje u sećanju zauvek!',
+  love_intro_2: 'Ove ture su kreirane tako da pružaju romantičnu atmosferu, intimnost i jedinstvena iskustva – od šetnji kroz istorijske ulice i duhovne manastire, do vožnji brodićem uz zalazak sunca ili degustacija vina u skrivenim kutcima Srbije.',
+  love_intro_3: 'Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajanje i detalji koji čine vaše putovanje savršenim i nezaboravnim.',
+  love_cta: 'Pogledaj dostupne ture',
+  love_book_button: 'Rezerviši turu',
+  love_read_more: 'Pročitaj više',
+
+  // Monastery Tours hero
+  monastery_title: 'Manastirske ture',
+  monastery_intro: 'Otkrijte duhovno nasleđe i mirnu lepotu drevnih manastira. Doživite vekove tradicije, arhitekture i duhovne mudrosti.',
+
+  // City & History Tours hero
+  city_title: 'Gradske i istorijske ture',
+  city_intro: 'Putujte kroz vreme i otkrijte bogatu istoriju, kulturu i arhitektonska remek-dela koja su oblikovala ovaj prelepi grad i region.',
+
+  // Common section titles
+  section_spiritual_journeys: 'Duhovna putovanja',
+  section_historical_adventures: 'Istorijske avanture',
+  section_love_tours: 'Ljubavne ture',
+  section_love_tours_sub: 'Svaka tura je osmišljena da stvori posebne trenutke i nezaboravne uspomene.',
 };
 export default sr;

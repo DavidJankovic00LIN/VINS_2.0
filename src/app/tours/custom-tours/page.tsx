@@ -26,11 +26,11 @@ export default function CustomTours() {
       <Navigation />
       
       {/* Hero */}
-      <section className="pt-16 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20">
+      <section className="pt-16 bg-gradient-to-b from-yellow-200 via-orange-200 to-orange-300">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">Privatne ture – putovanje po vašoj meri</h1>
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6">Privatne ture – putovanje po vašoj meri</h1>
+            <p className="text-lg sm:text-xl text-gray-800 max-w-3xl mx-auto">
               Želite da svoje putovanje učinite potpuno intimnim i prilagođenim vama? Privatne ture su idealno rešenje –
               bilo da planirate porodični izlet, romantično putovanje ili avanturu sa prijateljima, osmisliću doživljaj koji odgovara samo vašoj grupi.
             </p>
@@ -120,7 +120,7 @@ export default function CustomTours() {
                 </div>
                 <button
                   type="submit"
-                  className="h-10 px-5 rounded-full bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors"
+                  className="h-10 px-5 rounded-full bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 transition-colors"
                 >
                   Pošalji upit
                 </button>

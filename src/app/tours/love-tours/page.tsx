@@ -2,8 +2,10 @@
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { useI18n } from '@/i18n/I18nProvider';
 
 export default function LoveTours() {
+  const { t } = useI18n();
   const [openTourId, setOpenTourId] = useState<string | null>(null);
   const tours = [
     {
@@ -101,30 +103,32 @@ export default function LoveTours() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-16 bg-gradient-to-br from-pink-50 to-rose-100 dark:from-pink-900/20 dark:to-rose-900/20">
+      <section className="pt-16 bg-gradient-to-b from-yellow-200 via-orange-200 to-orange-300">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
-              💕 Ture za parove – savršen poklon i nezaboravno iskustvo
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6 text-gray-900">
+              💕 {t('love_title')}
             </h1>
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Želite da iznenadite svog partnera ili partnerku za godišnjicu, rođendan ili poseban trenutak? Putovanje za dvoje je savršen izbor – najbolji poklon koji ostaje u sećanju zauvek!
-
-Ove ture su kreirane tako da pružaju romantičnu atmosferu, intimnost i jedinstvena iskustva – od šetnji kroz istorijske ulice i duhovne manastire, do vožnji brodićem uz zalazak sunca ili degustacija vina u skrivenim kutcima Srbije.
-
-Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajanje i detalji koji čine vaše putovanje savršenim i nezaboravnim.
+            <p className="text-lg sm:text-xl text-gray-800 max-w-3xl mx-auto font-medium">
+              {t('love_intro_1')}
+              <br/>
+              <br/>
+              {t('love_intro_2')}
+              <br/>
+              <br/>
+              {t('love_intro_3')}
             </p>
           </div>
         </div>
       </section>
 
       {/* Tours Section */}
-      <section className="bg-background">
+      <section className="bg-gradient-to-br from-orange-600 via-orange-500 to-blue-700">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold tracking-tight mb-4">Ljubavne ture</h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Svaka tura je osmišljena da stvori posebne trenutke i nezaboravne uspomene.
+            <h2 className="text-3xl font-semibold tracking-tight mb-4 text-white">{t('section_love_tours')}</h2>
+            <p className="text-white/80 max-w-2xl mx-auto">
+              {t('section_love_tours_sub')}
             </p>
           </div>
 
@@ -132,23 +136,23 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
             {tours.map((tour) => (
               <div 
                 key={tour.id}
-                className="rounded-xl border border-black/[.08] dark:border-white/[.12] p-6 bg-background hover:shadow-lg transition-all duration-200"
+                className="rounded-2xl border border-orange-200 p-6 bg-white shadow-xl hover:shadow-2xl hover:border-orange-300 transition-all duration-200 text-gray-800"
               >
                 <div className="text-4xl mb-4">💕</div>
                 <h3 className="text-xl font-semibold mb-3">{tour.name}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">{tour.description}</p>
+                <p className="text-gray-700 mb-4">{tour.description}</p>
                 
                 <div className="flex items-center gap-4 mb-4 text-sm">
-                  <span>⏱️ {tour.duration}</span>
-                  <span>💰 {tour.price}</span>
+                  <span>⏱️ {t('tour_duration')}: {tour.duration}</span>
+                  <span>💰 {t('tour_price')}: {tour.price}</span>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-medium mb-2">Detalji i napomene:</h4>
-                  <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                  <h4 className="font-medium mb-2">{t('tour_details_notes')}</h4>
+                  <ul className="space-y-1 text-sm text-gray-700">
                     {tour.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <span className="text-pink-500">✓</span>
+                        <span className="text-orange-500">✓</span>
                         {highlight}
                       </li>
                     ))}
@@ -158,15 +162,15 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
                 <div className="flex gap-3">
                   <button
                     onClick={() => setOpenTourId(tour.id)}
-                    className="inline-flex items-center justify-center h-10 px-5 rounded-full border border-black/[.1] dark:border-white/[.15] text-sm font-medium hover:bg-black/[.05] dark:hover:bg-white/[.05] transition-colors"
+                    className="inline-flex items-center justify-center h-10 px-5 rounded-full border border-black/[.1] text-sm font-medium hover:bg-black/[.05] transition-colors"
                   >
-                    Pročitaj više
+                    {t('tours_read_more')}
                   </button>
                   <a
                     href={tour.bookingLink}
-                    className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-pink-600 text-white text-sm font-medium hover:bg-pink-700 transition-colors"
+                    className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 transition-colors"
                   >
-                    Rezerviši turu
+                    {t('tours_book_button')}
                   </a>
                 </div>
               </div>
@@ -193,39 +197,39 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
             <div className="p-6 space-y-6">
               {/* Meta */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId);
-                return t?.meta ? (
+                const tItem = tours.find(t => t.id === openTourId);
+                return tItem?.meta ? (
                   <div className="grid sm:grid-cols-3 gap-3 text-sm text-gray-700 dark:text-gray-300">
-                    {t.meta.max && <div>👥 {t.meta.max}</div>}
-                    {t.meta.term && <div>🗓️ {t.meta.term}</div>}
-                    {t.meta.start && <div>⏱️ Početak: {t.meta.start}</div>}
+                    {tItem.meta.max && <div>👥 {tItem.meta.max}</div>}
+                    {tItem.meta.term && <div>🗓️ {tItem.meta.term}</div>}
+                    {tItem.meta.start && <div>⏱️ Početak: {tItem.meta.start}</div>}
                   </div>
                 ) : null;
               })()}
 
               {/* Opis */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId);
-                return t?.opis ? (
+                const tItem = tours.find(t => t.id === openTourId);
+                return tItem?.opis ? (
                   <div className="space-y-3">
-                    {t.opis.map((p, i) => (
+                    {tItem.opis.map((p, i) => (
                       <p key={i} className="text-gray-700 dark:text-gray-300">{p}</p>
                     ))}
                   </div>
                 ) : (
-                  <p className="text-gray-700 dark:text-gray-300">{t?.description}</p>
+                  <p className="text-gray-700 dark:text-gray-300">{tItem?.description}</p>
                 );
               })()}
 
               {/* Saznaćete */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId);
-                return t?.saznacete ? (
+                const tItem = tours.find(t => t.id === openTourId);
+                return tItem?.saznacete ? (
                   <div>
-                    <h4 className="font-medium mb-2">Na ovoj turi saznaćete:</h4>
+                    <h4 className="font-medium mb-2">{t('tour_learn_title')}</h4>
                     <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                      {t.saznacete.map((it, i) => (
-                        <li key={i} className="flex items-center gap-2"><span className="text-pink-500">✓</span>{it}</li>
+                      {tItem.saznacete.map((it, i) => (
+                        <li key={i} className="flex items-center gap-2"><span className="text-orange-500">✓</span>{it}</li>
                       ))}
                     </ul>
                   </div>
@@ -234,13 +238,13 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
 
               {/* Zašto */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId);
-                return t?.zasto ? (
+                const tItem = tours.find(t => t.id === openTourId);
+                return tItem?.zasto ? (
                   <div>
-                    <h4 className="font-medium mb-2">Zašto ne smete propustiti?</h4>
+                    <h4 className="font-medium mb-2">{t('tour_why_title')}</h4>
                     <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                      {t.zasto.map((it, i) => (
-                        <li key={i} className="flex items-center gap-2"><span className="text-pink-500">✓</span>{it}</li>
+                      {tItem.zasto.map((it, i) => (
+                        <li key={i} className="flex items-center gap-2"><span className="text-orange-500">✓</span>{it}</li>
                       ))}
                     </ul>
                   </div>
@@ -249,13 +253,13 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
 
               {/* Šta vas očekuje */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId);
-                return t?.staVasOcekuje ? (
+                const tItem = tours.find(t => t.id === openTourId);
+                return tItem?.staVasOcekuje ? (
                   <div>
-                    <h4 className="font-medium mb-2">Šta vas očekuje:</h4>
+                    <h4 className="font-medium mb-2">{t('tour_expect_title')}</h4>
                     <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                      {t.staVasOcekuje.map((it, i) => (
-                        <li key={i} className="flex items-center gap-2"><span className="text-pink-500">✓</span>{it}</li>
+                      {tItem.staVasOcekuje.map((it, i) => (
+                        <li key={i} className="flex items-center gap-2"><span className="text-orange-500">✓</span>{it}</li>
                       ))}
                     </ul>
                   </div>
@@ -264,33 +268,33 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
 
               {/* Marketing */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId);
-                return t?.marketing ? (
+                const tItem = tours.find(t => t.id === openTourId);
+                return tItem?.marketing ? (
                   <div className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    {t.marketing.map((m, i) => (<div key={i}>{m}</div>))}
+                    {tItem.marketing.map((m, i) => (<div key={i}>{m}</div>))}
                   </div>
                 ) : null;
               })()}
 
               {/* Info */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId);
-                return t?.info ? (
+                const tItem = tours.find(t => t.id === openTourId);
+                return tItem?.info ? (
                   <div className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    {t.info.map((inf, i) => (<div key={i}>{inf}</div>))}
+                    {tItem.info.map((inf, i) => (<div key={i}>{inf}</div>))}
                   </div>
                 ) : null;
               })()}
 
               {/* Ponesite */}
               {(() => {
-                const t = tours.find(t => t.id === openTourId);
-                return t?.ponesite ? (
+                const tItem = tours.find(t => t.id === openTourId);
+                return tItem?.ponesite ? (
                   <div>
-                    <h4 className="font-medium mb-2">Ponesite:</h4>
+                    <h4 className="font-medium mb-2">{t('tour_pack_title')}</h4>
                     <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                      {t.ponesite.map((it, i) => (
-                        <li key={i} className="flex items-center gap-2"><span className="text-pink-500">✓</span>{it}</li>
+                      {tItem.ponesite.map((it, i) => (
+                        <li key={i} className="flex items-center gap-2"><span className="text-orange-500">✓</span>{it}</li>
                       ))}
                     </ul>
                   </div>
@@ -299,9 +303,9 @@ Uz privatnu turu za parove, sve se prilagođava vama: tempo, destinacije, trajan
               <div className="pt-4 border-t border-black/[.08] dark:border-white/[.12] flex justify-end">
                 <a
                   href={tours.find(t => t.id === openTourId)?.bookingLink || '#'}
-                  className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-pink-600 text-white text-sm font-medium hover:bg-pink-700 transition-colors"
+                  className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 transition-colors"
                 >
-                  Rezerviši turu
+                  {t('tours_book_button')}
                 </a>
               </div>
             </div>

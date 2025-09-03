@@ -44,6 +44,8 @@ const tr = {
   tours_custom_name: 'Özel Turlar',
   tours_custom_desc: 'İlgi alanlarınıza ve programınıza göre mükemmel tur deneyimi yaratın',
   tours_cta: 'Müsait turları görüntüle',
+  tours_book_button: 'Bu turu rezerve et',
+  tours_read_more: 'Daha fazla bilgi',
   
   // Gallery Section
   gallery_title: 'Galeri',
@@ -123,5 +125,36 @@ const tr = {
   privacy_rights_text: 'Kişisel verilerinize erişme, düzeltme veya silme hakkınız vardır. Ayrıca pazarlama iletişimlerinden istediğiniz zaman abonelikten çıkabilirsiniz.',
   privacy_cookies_title: '6. Çerezler ve Takip',
   privacy_cookies_text: 'Deneyiminizi geliştirmek, web sitesi trafiğini analiz etmek ve ziyaretçilerin nereden geldiğini anlamak için çerezler ve benzer teknolojiler kullanıyoruz.',
+  
+  // Tour pages common
+  tour_duration: 'Süre',
+  tour_price: 'Fiyat',
+  tour_highlights: 'Öne çıkanlar:',
+  tour_details_notes: 'Detaylar ve notlar:',
+  tour_learn_title: 'Bu turda şunları öğreneceksiniz:',
+  tour_why_title: 'Neden kaçırmamalısınız?',
+  tour_expect_title: 'Sizi ne bekliyor:',
+  tour_pack_title: 'Yanınıza alın:',
+  
+  // Love Tours page
+  love_title: 'Çiftler için turlar – mükemmel hediye ve unutulmaz deneyim',
+  love_intro_1: 'Partnerinizi yıldönümü, doğum günü veya özel bir an için şaşırtmak ister misiniz? İki kişilik bir gezi mükemmel seçimdir – hafızada sonsuza kadar kalan en iyi hediye!',
+  love_intro_2: 'Bu turlar romantik atmosfer, mahremiyet ve benzersiz deneyimler sunar – tarihi sokaklarda yürüyüşlerden ve manevi manastırlardan, gün batımında tekne turlarına veya Sırbistan’ın saklı köşelerinde şarap tadımlarına kadar.',
+  love_intro_3: 'Çiftler için özel bir turla her şey size göre düzenlenir: tempo, destinasyonlar, süre ve yolculuğunuzu mükemmel ve unutulmaz kılan detaylar.',
+  
+  // Monastery Tours hero
+  monastery_title: 'Manastır Turları',
+  monastery_intro: 'Antik manastırların ruhani mirasını ve huzurlu güzelliğini keşfedin. Yüzyılların geleneğini, mimarisini ve manevi bilgeliğini deneyimleyin.',
+
+  // City & History Tours hero
+  city_title: 'Şehir ve Tarih Turları',
+  city_intro: 'Zaman içinde yolculuk edin ve bu güzel şehri ve bölgeyi şekillendiren zengin tarihi, kültürü ve mimari başyapıtları keşfedin.',
+
+  // Common section titles
+  section_spiritual_journeys: 'Ruhani Yolculuklar',
+  section_historical_adventures: 'Tarihi Maceralar',
+  section_love_tours: 'Aşk Turları',
+  section_love_tours_sub: 'Her tur, özel anlar ve unutulmaz anılar yaratmak için tasarlandı.',
 };
 export default tr;
+

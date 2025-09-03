@@ -457,7 +457,7 @@ export default function MonasteryTours() {
                 <div className="flex gap-3">
                   <button
                     onClick={() => setOpenTourId(tour.id)}
-                    className="inline-flex items-center justify-center h-10 px-5 rounded-full border border-black/[.1] text-sm font-medium hover:bg-black/[.05] transition-colors"
+                    className="inline-flex items-center justify-center h-10 px-5 rounded-full bg-amber-400 text-white text-sm font-medium hover:bg-amber-500 transition-colors shadow"
                   >
                     {t('tours_read_more')}
                   </button>

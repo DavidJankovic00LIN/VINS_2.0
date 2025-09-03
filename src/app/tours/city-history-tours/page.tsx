@@ -214,7 +214,7 @@ export default function CityHistoryTours() {
             'Vojvodina şatolarının görkemi, Art Nouveau Subotica ve opsiyonel Palić Gölü ziyareti.',
           highlights: [
             'Şatolar, parklar ve soylu hikayeler arasında yürüyüş',
-            'Subotica – Art Nouveau, kültürel zenginlikler ve gastronomi',
+            'Subotica – Art Nouveau, kültürel zenginlikler ve gastronomija',
             'Opsiyon: Palić Gölü – yürüyüş, bisiklet veya tekne turu'
           ],
           details: [
@@ -399,7 +399,7 @@ export default function CityHistoryTours() {
                 <div className="flex gap-3">
                   <button
                     onClick={() => setOpenTourId(tour.id)}
-                    className="inline-flex items-center justify-center h-10 px-5 rounded-full border border-black/[.1] text-sm font-medium hover:bg-black/[.05] transition-colors"
+                    className="inline-flex items-center justify-center h-10 px-5 rounded-full bg-amber-400 text-white text-sm font-medium hover:bg-amber-500 transition-colors shadow"
                   >
                     {t('tours_read_more')}
                   </button>

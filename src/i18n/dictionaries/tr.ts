@@ -155,6 +155,33 @@ const tr = {
   section_historical_adventures: 'Tarihi Maceralar',
   section_love_tours: 'Aşk Turları',
   section_love_tours_sub: 'Her tur, özel anlar ve unutulmaz anılar yaratmak için tasarlandı.',
+
+  // Custom Tours Page
+  custom_tours_hero_title: 'Özel Turlar – Kendi Yolunuzda Seyahat',
+  custom_tours_hero_description: 'Yolculuğunuzu tamamen samimi ve size özel hale getirmek ister misiniz? Özel turlar ideal çözümdür – aile gezisi, romantik kaçamak veya arkadaşlarla macera planlıyor olun, sadece grubunuza uygun bir deneyim yaratacağım.',
+  custom_tours_how_it_works_title: 'Nasıl çalışır?',
+  custom_tours_step1_title: 'Tur seçin',
+  custom_tours_step1_desc: 'Hangi turu ziyaret etmek istediğinizi bana bildirin.',
+  custom_tours_step2_title: 'Detayları belirleyin',
+  custom_tours_step2_desc: 'Kaç kişi ve ne kadar süre tur yapmak istediğinizi.',
+  custom_tours_step3_title: 'Teklif hazırlıyoruz',
+  custom_tours_step3_desc: 'Gereksinimler, süre ve mesafeye göre, fiyatlandırmalı kişiselleştirilmiş teklif gönderiyoruz.',
+  custom_tours_note_title: 'Not',
+  custom_tours_note_description: 'Özel tur fiyatları sabittir ve pazarlık kabul edilmez. En iyi deneyim ve kaliteli organizasyon sağlamak için tur süresi, katılımcı sayısı ve kat edilen mesafeye göre oluşturulur.',
+  custom_tours_why_choose_title: 'Neden özel tur seçmelisiniz?',
+  custom_tours_benefit1: 'Tam esneklik – destinasyonları, zamanı ve tempoyu siz seçersiniz.',
+  custom_tours_benefit2: 'Özellik – sadece grubunuz için tur, kalabalık ve bekleme olmadan.',
+  custom_tours_benefit3: 'Kişiselleştirilmiş deneyim – tercihlerinize göre hikayeler, anekdotlar ve ilginç bilgiler.',
+  custom_tours_form_title: 'Özel tur için sorgu gönderin',
+  custom_tours_form_name: 'Ad Soyad',
+  custom_tours_form_name_placeholder: 'Adınız ve soyadınız',
+  custom_tours_form_email: 'E-posta',
+  custom_tours_form_email_placeholder: 'siz@ornek.com',
+  custom_tours_form_phone: 'Telefon',
+  custom_tours_form_phone_placeholder: '+381 6x xxx xxxx',
+  custom_tours_form_message: 'Mesaj',
+  custom_tours_form_message_placeholder: 'Turu, kişi sayısını ve istenen süreyi belirtin...',
+  custom_tours_form_submit: 'Sorgu gönder',
 };
 export default tr;
 

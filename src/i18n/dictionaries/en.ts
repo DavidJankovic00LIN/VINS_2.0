@@ -44,8 +44,6 @@ const en = {
   tours_custom_name: 'Custom Tours',
   tours_custom_desc: 'Create the perfect tour experience tailored to your interests and schedule',
   tours_cta: 'View available tours',
-  tours_book_button: 'Book This Tour',
-  tours_read_more: 'Read more',
   
   // Gallery Section
   gallery_title: 'Gallery',
@@ -125,61 +123,5 @@ const en = {
   privacy_rights_text: 'You have the right to access, correct or delete your personal data. You can also unsubscribe from marketing communications at any time.',
   privacy_cookies_title: '6. Cookies and Tracking',
   privacy_cookies_text: 'We use cookies and similar technologies to improve your experience, analyze website traffic and understand where visitors come from.',
-  
-  // Tour pages common
-  tour_duration: 'Duration',
-  tour_price: 'Price',
-  tour_highlights: 'Highlights:',
-  tour_details_notes: 'Details and notes:',
-  tour_learn_title: 'On this tour you will learn:',
-  tour_why_title: "Why you shouldn't miss it?",
-  tour_expect_title: 'What to expect:',
-  tour_pack_title: 'Bring with you:',
-  
-  // Love Tours page
-  love_title: 'Tours for couples – the perfect gift and unforgettable experience',
-  love_intro_1: 'Want to surprise your partner for an anniversary, birthday or special moment? A trip for two is the perfect choice – the best gift that remains in memory forever!',
-  love_intro_2: 'These tours are created to provide a romantic atmosphere, intimacy and unique experiences – from walks through historic streets and spiritual monasteries, to boat rides at sunset or wine tastings in hidden corners of Serbia.',
-  love_intro_3: 'With a private tour for couples, everything is tailored to you: pace, destinations, duration and details that make your journey perfect and unforgettable.',
-  // Monastery Tours hero
-  monastery_title: 'Monastery Tours',
-  monastery_intro: 'Discover the spiritual heritage and peaceful beauty of ancient monasteries. Experience centuries of tradition, architecture, and spiritual wisdom.',
-
-  // City & History Tours hero
-  city_title: 'City & History Tours',
-  city_intro: "Journey through time and discover the rich history, culture, and architectural marvels that have shaped this beautiful city and region.",
-
-  // Common section titles
-  section_spiritual_journeys: 'Spiritual Journeys',
-  section_historical_adventures: 'Historical Adventures',
-  section_love_tours: 'Love Tours',
-  section_love_tours_sub: 'Each tour is designed to create special moments and unforgettable memories.',
-
-  // Custom Tours Page
-  custom_tours_hero_title: 'Private Tours – Travel Your Way',
-  custom_tours_hero_description: 'Want to make your journey completely intimate and tailored to you? Private tours are the ideal solution – whether you\'re planning a family trip, romantic getaway, or adventure with friends, I\'ll create an experience that suits only your group.',
-  custom_tours_how_it_works_title: 'How it works?',
-  custom_tours_step1_title: 'Choose a tour',
-  custom_tours_step1_desc: 'Let me know which tour you\'d like to visit.',
-  custom_tours_step2_title: 'Specify details',
-  custom_tours_step2_desc: 'How many people and how long you want the tour to last.',
-  custom_tours_step3_title: 'We prepare an offer',
-  custom_tours_step3_desc: 'Based on requirements, duration and distance, we send a personalized offer with pricing.',
-  custom_tours_note_title: 'Note',
-  custom_tours_note_description: 'Private tour prices are fixed and not negotiable. They are formed according to tour duration, number of participants and distance covered, to ensure the best experience and quality organization.',
-  custom_tours_why_choose_title: 'Why choose a private tour?',
-  custom_tours_benefit1: 'Complete flexibility – you choose destinations, time and pace.',
-  custom_tours_benefit2: 'Exclusivity – tour only for your group, without crowds and waiting.',
-  custom_tours_benefit3: 'Tailored experience – stories, anecdotes and interesting facts according to your preferences.',
-  custom_tours_form_title: 'Send inquiry for private tour',
-  custom_tours_form_name: 'Full name',
-  custom_tours_form_name_placeholder: 'Your full name',
-  custom_tours_form_email: 'E-mail',
-  custom_tours_form_email_placeholder: 'you@example.com',
-  custom_tours_form_phone: 'Phone',
-  custom_tours_form_phone_placeholder: '+381 6x xxx xxxx',
-  custom_tours_form_message: 'Message',
-  custom_tours_form_message_placeholder: 'Specify tour, number of people and desired duration...',
-  custom_tours_form_submit: 'Send inquiry',
 };
 export default en;

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36">
+  <rect width="60" height="36" fill="#012169"/>
+  <g stroke-width="6">
+    <path d="M0,0 L60,36 M60,0 L0,36" stroke="#fff"/>
+    <path d="M0,-3 L-3,0 L27,18 L24,21 L-6,1 L-6,5 L22,23 L20,26 L-6,8 L-6,12 L18,27 L15,30 L-6,16 L-6,20 L13,32 L10,36 L0,36 L60,0 L60,4 L50,10 L60,16 L60,20 L46,12 L43,15 L60,25 L60,29 L39,16 L36,19 L60,33 L60,36 L52,36 L30,22 L27,25 L41,36 L37,36 L24,27 L21,30 L28,36 L24,36 L18,31 L15,34 L17,36 L0,36" fill="#C8102E"/>
+  </g>
+  <rect x="24" width="12" height="36" fill="#fff"/>
+  <rect y="12" width="60" height="12" fill="#fff"/>
+  <rect x="26" width="8" height="36" fill="#C8102E"/>
+  <rect y="14" width="60" height="8" fill="#C8102E"/>
+</svg>
+

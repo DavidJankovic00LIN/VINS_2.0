@@ -44,6 +44,8 @@ const sr = {
   tours_custom_name: 'Prilagođene ture',
   tours_custom_desc: 'Kreirajte savršeno iskustvo ture prilagođeno vašim interesovanjima i terminu',
   tours_cta: 'Pogledaj dostupne ture',
+  tours_featured_title: 'ture meseca',
+  tours_featured_desc: 'Pažljivo odabrana iskustva ovog meseca – romantičan beg, duhovno jutro i magičan pogled na grad sa reke.',
   tours_book_button: 'Rezerviši turu',
   tours_read_more: 'Pročitaj više',
   

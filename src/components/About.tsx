@@ -15,11 +15,6 @@ export default function About() {
   ];
 
   const getSkillIcon = (text: string) => {
-    const lower = text.toLowerCase();
-    if (lower.includes('iskustvo') || lower.includes('znanje')) return '🎓';
-    if (lower.includes('prilagođeno') || lower.includes('prilagodjeno') || lower.includes('željama') || lower.includes('zeljama')) return '👨‍👩';
-    if (lower.includes('priče') || lower.includes('price') || lower.includes('legende') || lower.includes('mitovi')) return '📖';
-    if (lower.includes('sigurnost') || lower.includes('organizacija')) return '🛡️';
     return '⭐';
   };
 

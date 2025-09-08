@@ -44,6 +44,8 @@ const tr = {
   tours_custom_name: 'Özel Turlar',
   tours_custom_desc: 'İlgi alanlarınıza ve programınıza göre mükemmel tur deneyimi yaratın',
   tours_cta: 'Müsait turları görüntüle',
+  tours_featured_title: 'ayın turları',
+  tours_featured_desc: 'Bu ay için özenle seçilmiş deneyimler – romantik bir kaçamak, ruhani bir sabah ve nehirden büyüleyici şehir manzarası.',
   tours_book_button: 'Bu turu rezerve et',
   tours_read_more: 'Daha fazla bilgi',
   

@@ -173,7 +173,7 @@ export default function CityHistoryTours() {
             '🎵 Müzik + temalı geceler (opsiyonel)'
           ],
           marketing: [
-            '✔ Gün batımı – kokteyl eşliğinde romantik atmosfer',
+            '✔ Sunset – kokteyl eşliğinde romantik atmosfer',
             '✔ Gece turu – ışıkların ve müziğin büyüsü',
             '🐢 "Kornjača" teknesi veya lüks gemi – suda zarafet'
           ],
@@ -215,7 +215,7 @@ export default function CityHistoryTours() {
           highlights: [
             'Şatolar, parklar ve soylu hikayeler arasında yürüyüş',
             'Subotica – Art Nouveau, kültürel zenginlikler ve gastronomija',
-            'Opsiyon: Palić Gölü – yürüyüş, bisiklet veya tekne turu'
+            'Opcija: Palić Gölü – yürüyüş, bisiklet veya tekne turu'
           ],
           details: [
             'Tarih, mimari ve doğanın mükemmel uyumu – Kuzey Sırbistan’ı sakin tempoda keşfedin.'
@@ -379,9 +379,20 @@ export default function CityHistoryTours() {
                 <h3 className="text-xl font-semibold mb-3">{tour.name}</h3>
                 <p className="text-gray-700 mb-4">{tour.description}</p>
                 
-                <div className="flex items-center gap-4 mb-4 text-sm">
-                  <span>⏱️ {t('tour_duration')}: {tour.duration}</span>
-                  {tour.price && <span>💰 {t('tour_price')}: {tour.price}</span>}
+                <div className="mb-4 text-sm space-y-2">
+                  <div className="flex items-center gap-1">⏱️ {t('tour_duration')}: {tour.duration}</div>
+                  {tour.price && <div className="flex items-center gap-1">💰 {t('tour_price')}: {tour.price}</div>}
+                  <div className="flex items-center gap-1">👨‍👩 {t('tour_max')}: {(() => {
+                    const pools = [tour.details, tour.practical, tour.marketing].flat().filter(Boolean) as string[];
+                    const txt = pools.join(' ');
+                    const m = txt.match(/\b(\d{1,3})(?:\s*[–-]\s*(\d{1,3}))?\b/);
+                    if (m) {
+                      const a = parseInt(m[1], 10);
+                      const b = m[2] ? parseInt(m[2], 10) : a;
+                      return Math.max(a, b);
+                    }
+                    return 66;
+                  })()}</div>
                 </div>
 
                 <div className="mb-6">

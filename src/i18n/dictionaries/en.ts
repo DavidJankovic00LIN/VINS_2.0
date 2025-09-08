@@ -44,6 +44,29 @@ const en = {
   tours_custom_name: 'Custom Tours',
   tours_custom_desc: 'Create the perfect tour experience tailored to your interests and schedule',
   tours_cta: 'View available tours',
+  tours_book_button: 'Book this tour',
+  tours_read_more: 'Read more',
+
+  // Tour pages common labels
+  tour_duration: 'Duration',
+  tour_price: 'Price',
+  tour_highlights: 'Highlights:',
+  tour_details_notes: 'Details and notes:',
+  tour_learn_title: 'On this tour you will learn:',
+  tour_why_title: 'Why you shouldn’t miss it?',
+  tour_expect_title: 'What to expect:',
+  tour_pack_title: 'Bring:',
+  tour_max: 'Max',
+
+  // City & History Tours hero
+  city_title: 'City & History Tours',
+  city_intro: 'Travel through time and discover the rich history, culture and architectural masterpieces that shaped this beautiful city and region.',
+  section_historical_adventures: 'Historical adventures',
+  section_spiritual_journeys: 'Spiritual journeys',
+
+  // Monastery Tours hero
+  monastery_title: 'Monastery Tours',
+  monastery_intro: 'Discover the spiritual heritage and peaceful beauty of ancient monasteries. Experience centuries of tradition, architecture and spiritual wisdom.',
   
   // Gallery Section
   gallery_title: 'Gallery',
@@ -77,9 +100,9 @@ const en = {
   contact_response_text: 'Usually within 2 hours',
   
   // Footer
-  footer_company: 'VINS Tourist Guide',
+  footer_company: 'Your Guide Maja',
   footer_description: 'Professional guided tours and travel experiences. Discover hidden gems, rich history and authentic local culture with our expert guides.',
-  footer_company_info: 'Company: VINS Tourist Services',
+  footer_company_info: 'Your Guide Maja',
   footer_pib: 'Tax ID: 123456789',
   footer_registration: 'Registration: 123456/2024',
   footer_address: 'Address: Belgrade, Serbia',
@@ -88,12 +111,12 @@ const en = {
   footer_phone: 'Phone: +381 11 123 4567',
   footer_whatsapp: 'WhatsApp: +381 60 123 4567',
   footer_instagram: 'Instagram: @vins.guide',
-  footer_facebook: 'Facebook: VINS Tourist Guide',
+  footer_facebook: 'Facebook: Your Guide Maja',
   footer_legal_title: 'Legal Documents',
   footer_terms: 'Terms of Service',
   footer_privacy: 'Privacy Policy',
   footer_cookies: 'Cookie Policy',
-  footer_copyright: '© 2025 VINS Tourist Guide. All rights reserved.',
+  footer_copyright: '© 2025 Your Guide Maja. All rights reserved.',
   footer_terms_title: 'Terms of Service',
   footer_privacy_title: 'Privacy Policy',
   footer_back_to_site: 'Back to site',
@@ -123,5 +146,45 @@ const en = {
   privacy_rights_text: 'You have the right to access, correct or delete your personal data. You can also unsubscribe from marketing communications at any time.',
   privacy_cookies_title: '6. Cookies and Tracking',
   privacy_cookies_text: 'We use cookies and similar technologies to improve your experience, analyze website traffic and understand where visitors come from.',
+
+  // Love Tours page
+  love_title: 'Tours for Couples – the perfect gift and unforgettable experience',
+  love_intro_1: 'Want to surprise your partner for an anniversary, birthday or a special moment? A trip for two is the perfect choice – the best gift that stays in memory forever!',
+  love_intro_2: 'These tours are designed to offer romantic atmosphere, intimacy and unique experiences – from strolls through historic streets and spiritual monasteries to sunset boat rides or wine tastings in Serbia’s hidden corners.',
+  love_intro_3: 'With a private tour for couples, everything is tailored to you: pace, destinations, duration and the details that make your journey perfect and unforgettable.',
+  love_cta: 'View available tours',
+  love_book_button: 'Book this tour',
+  love_read_more: 'Read more',
+
+  // Sections used on category pages
+  section_love_tours: 'Love Tours',
+  section_love_tours_sub: 'Each tour is designed to create special moments and unforgettable memories.',
+
+  // Custom Tours Page
+  custom_tours_hero_title: 'Private Tours – a journey made for you',
+  custom_tours_hero_description: 'Want to make your trip completely intimate and tailored to you? Private tours are the ideal solution – whether you are planning a family outing, a romantic getaway or an adventure with friends, I will create an experience that fits only your group.',
+  custom_tours_how_it_works_title: 'How it works?',
+  custom_tours_step1_title: 'Choose a tour',
+  custom_tours_step1_desc: 'Tell me which tour you would like to visit.',
+  custom_tours_step2_title: 'Set the details',
+  custom_tours_step2_desc: 'How many people and how long you want the tour to last.',
+  custom_tours_step3_title: 'We prepare the offer',
+  custom_tours_step3_desc: 'Based on the request, duration and mileage, we send a personalized offer with the price.',
+  custom_tours_note_title: 'Note',
+  custom_tours_note_description: 'The price of private tours is fixed and not negotiable. It is formed according to the duration of the tour, the number of participants and the distance traveled to ensure the best experience and quality organization.',
+  custom_tours_why_choose_title: 'Why choose a private tour?',
+  custom_tours_benefit1: 'Complete flexibility – choose destinations, time and pace.',
+  custom_tours_benefit2: 'Exclusivity – a tour only for your group, without crowds and waiting.',
+  custom_tours_benefit3: 'Personalized experience – stories, anecdotes and curiosities tailored to you.',
+  custom_tours_form_title: 'Send an inquiry for a private tour',
+  custom_tours_form_name: 'Full name',
+  custom_tours_form_name_placeholder: 'Your full name',
+  custom_tours_form_email: 'E-mail',
+  custom_tours_form_email_placeholder: 'you@example.com',
+  custom_tours_form_phone: 'Phone',
+  custom_tours_form_phone_placeholder: '+381 6x xxx xxxx',
+  custom_tours_form_message: 'Message',
+  custom_tours_form_message_placeholder: 'State the tour, number of people and the desired duration...',
+  custom_tours_form_submit: 'Send inquiry',
 };
 export default en;

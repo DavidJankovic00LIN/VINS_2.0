@@ -4,10 +4,29 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useI18n } from '@/i18n/I18nProvider';
 
+type Tour = {
+  id: string;
+  name: string;
+  duration: string;
+  price: string;
+  description: string;
+  highlights: string[];
+  bookingLink: string;
+  // Optional extended fields (used in SR content)
+  meta?: { max?: string; term?: string; start?: string };
+  opis?: string[];
+  saznacete?: string[];
+  zasto?: string[];
+  staVasOcekuje?: string[];
+  marketing?: string[];
+  info?: string[];
+  ponesite?: string[];
+};
+
 export default function LoveTours() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [openTourId, setOpenTourId] = useState<string | null>(null);
-  const tours = [
+  const srTours: Tour[] = [
     {
       id: 'bgd-setnja-ljubavne-price',
       name: 'Beograd – Šetnja kroz tajne i ljubavne priče',
@@ -98,6 +117,80 @@ export default function LoveTours() {
     }
   ];
 
+  const enTours: Tour[] = [
+    {
+      id: 'bgd-setnja-ljubavne-price',
+      name: 'Belgrade – A Walk Through Secrets and Love Stories',
+      duration: 'about 2 hours',
+      price: '[set price]',
+      description:
+        'An unusual walk through the center of Belgrade with stories of wealthy patrons, artists and love hidden behind old facades.',
+      highlights: [
+        'Max participants: 25–30 (limited seats)',
+        'Schedule: every Friday and Sunday',
+        'Who were the richest Belgraders and their palaces',
+        'The most beautiful and most tragic love stories of Knez Mihailova',
+        'Mysteries and secrets of the main street',
+        'Perfect for Instagram shots'
+      ],
+      bookingLink: '/booking/beograd-setnja-ljubavne-price'
+    },
+    {
+      id: 'dunavska-romansa-ns-karlovci',
+      name: 'Danube Romance – Novi Sad & Sremski Karlovci',
+      duration: 'full-day tour',
+      price: '[set price – limited seats]',
+      description:
+        'Vojvodina charm of Petrovaradin Fortress, Novi Sad streets and romantic Karlovci – city of wine, love and history.',
+      highlights: [
+        'Participants: 10–15 people',
+        'Novi Sad sights: Danube Park, Zmaj Jovina, Dunavska Street',
+        'Local wine tasting (optional)',
+        'Special photo moments with a view of the Danube',
+        'Departure from Belgrade, whole day'
+      ],
+      bookingLink: '/booking/dunavska-romansa-novi-sad-karlovci'
+    }
+  ];
+
+  const trTours: Tour[] = [
+    {
+      id: 'bgd-setnja-ljubavne-price',
+      name: 'Belgrad – Sırlar ve Aşk Hikayeleri Yürüyüşü',
+      duration: 'yaklaşık 2 saat',
+      price: '[fiyat ekle]',
+      description:
+        'Belgrad merkezinde eski cephelerin ardına saklanan zenginler, sanatçılar ve aşkların hikayeleriyle sıra dışı bir yürüyüş.',
+      highlights: [
+        'Maks katılımcı: 25–30 (sınırlı yer)',
+        'Program: her Cuma ve Pazar',
+        'En zengin Belgradlılar ve sarayları kimlerdi',
+        'Knez Mihailova’nın en güzel ve en trajik aşk hikayeleri',
+        'Ana caddenin gizemleri ve sırları',
+        'Instagram için mükemmel kareler'
+      ],
+      bookingLink: '/booking/beograd-setnja-ljubavne-price'
+    },
+    {
+      id: 'dunavska-romansa-ns-karlovci',
+      name: 'Tuna Romantizmi – Novi Sad & Sremski Karlovci',
+      duration: 'tüm gün tur',
+      price: '[fiyat – sınırlı yer]',
+      description:
+        'Petrovaradin Kalesi, Novi Sad sokakları ve romantik Karlovci – şarap, aşk ve tarihin şehri.',
+      highlights: [
+        'Katılımcılar: 10–15 kişi',
+        'Novi Sad: Tuna Parkı, Zmaj Jovina, Dunavska Caddesi',
+        'Yerel şarap tadımı (opsiyonel)',
+        'Tuna manzaralı özel fotoğraf anları',
+        'Belgrad’dan hareket, tüm gün'
+      ],
+      bookingLink: '/booking/dunavska-romansa-novi-sad-karlovci'
+    }
+  ];
+
+  const tours: Tour[] = lang === 'ENG' ? enTours : lang === 'TUR' ? trTours : srTours;
+
   return (
     <main className="font-sans">
       <Navigation />
@@ -142,9 +235,20 @@ export default function LoveTours() {
                 <h3 className="text-xl font-semibold mb-3">{tour.name}</h3>
                 <p className="text-gray-700 mb-4">{tour.description}</p>
                 
-                <div className="flex items-center gap-4 mb-4 text-sm">
-                  <span>⏱️ {t('tour_duration')}: {tour.duration}</span>
-                  <span>💰 {t('tour_price')}: {tour.price}</span>
+                <div className="mb-4 text-sm space-y-2">
+                  <div className="flex items-center gap-1">⏱️ {t('tour_duration')}: {tour.duration}</div>
+                  <div className="flex items-center gap-1">💰 {t('tour_price')}: {tour.price}</div>
+                  <div className="flex items-center gap-1">👨‍👩 {t('tour_max')}: {(() => {
+                    const pools = [tour.highlights].flat().filter(Boolean) as string[];
+                    const txt = pools.join(' ');
+                    const m = txt.match(/\b(\d{1,3})(?:\s*[–-]\s*(\d{1,3}))?\b/);
+                    if (m) {
+                      const a = parseInt(m[1], 10);
+                      const b = m[2] ? parseInt(m[2], 10) : a;
+                      return Math.max(a, b);
+                    }
+                    return 66;
+                  })()}</div>
                 </div>
 
                 <div className="mb-6">

@@ -82,10 +82,6 @@ export default function Contact() {
                 <div className="font-medium text-white">{t('contact_instagram_title')}</div>
                 <a href="#" className="text-white/90 hover:text-white transition-colors">@vins.guide</a>
               </div>
-              <div className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border-white/30">
-                <div className="font-medium text-white">{t('contact_whatsapp_title')}</div>
-                <a href="tel:+1234567890" className="text-white/90 hover:text-white transition-colors">+1 (234) 567-890</a>
-              </div>
               <div className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border:white/30">
                 <div className="font-medium text-white">{t('contact_response_title')}</div>
                 <span className="text-white/90">{t('contact_response_text')}</span>

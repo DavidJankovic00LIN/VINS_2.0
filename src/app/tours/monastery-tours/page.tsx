@@ -437,9 +437,20 @@ export default function MonasteryTours() {
                 <h3 className="text-xl font-semibold mb-3">{tour.name}</h3>
                 <p className="text-gray-700 mb-4">{tour.description}</p>
                 
-                <div className="flex items-center gap-4 mb-4 text-sm">
-                  <span>⏱️ {t('tour_duration')}: {tour.duration}</span>
-                  {tour.price && <span>💰 {t('tour_price')}: {tour.price}</span>}
+                <div className="mb-4 text-sm space-y-2">
+                  <div className="flex items-center gap-1">⏱️ {t('tour_duration')}: {tour.duration}</div>
+                  {tour.price && <div className="flex items-center gap-1">💰 {t('tour_price')}: {tour.price}</div>}
+                  <div className="flex items-center gap-1">👨‍👩 {t('tour_max')}: {(() => {
+                    const pools = [tour.fullDescription, tour.practical].flat().filter(Boolean) as string[];
+                    const txt = pools.join(' ');
+                    const m = txt.match(/\b(\d{1,3})(?:\s*[–-]\s*(\d{1,3}))?\b/);
+                    if (m) {
+                      const a = parseInt(m[1], 10);
+                      const b = m[2] ? parseInt(m[2], 10) : a;
+                      return Math.max(a, b);
+                    }
+                    return 66;
+                  })()}</div>
                 </div>
 
                 <div className="mb-6">

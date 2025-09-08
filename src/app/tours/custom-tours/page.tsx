@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useI18n } from '@/i18n/I18nProvider';
@@ -74,6 +75,7 @@ export default function CustomTours() {
             {/* Right form */}
             <div className="bg-white rounded-2xl shadow-xl p-6 border border-orange-200">
               <h3 className="text-xl font-semibold mb-4 text-gray-900">{t('custom_tours_form_title')}</h3>
+              <div className="text-sm text-gray-700 mb-3">👨‍👩 {t('tour_max')}: 66</div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm mb-1 text-gray-800">{t('custom_tours_form_name')}</label>

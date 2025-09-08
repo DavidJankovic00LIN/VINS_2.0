@@ -79,9 +79,9 @@ const sr = {
   contact_response_text: 'Obično u roku od 2 sata',
   
   // Footer
-  footer_company: 'VINS Turistički vodič',
+  footer_company: 'Vaš Vodič Maja',
   footer_description: 'Profesionalne vođene ture i putnička iskustva. Otkrijte skrivene dragulje, bogatu istoriju i autentičnu lokalnu kulturu uz naše stručne vodiče.',
-  footer_company_info: 'Kompanija: VINS Turističke Usluge',
+  footer_company_info: 'Vaš Vodič Maja',
   footer_pib: 'PIB: 123456789',
   footer_registration: 'Registracija: 123456/2024',
   footer_address: 'Adresa: Beograd, Srbija',
@@ -90,12 +90,12 @@ const sr = {
   footer_phone: 'Telefon: +381 11 123 4567',
   footer_whatsapp: 'WhatsApp: +381 60 123 4567',
   footer_instagram: 'Instagram: @vins.guide',
-  footer_facebook: 'Facebook: VINS Turistički vodič',
+  footer_facebook: 'Facebook: Vaš Vodič Maja',
   footer_legal_title: 'Pravna dokumenta',
   footer_terms: 'Uslovi korišćenja',
   footer_privacy: 'Politika privatnosti',
   footer_cookies: 'Politika kolačića',
-  footer_copyright: '© 2025 VINS Turistički vodič. Sva prava zadržana.',
+  footer_copyright: '© 2025 Vaš Vodič Maja. Sva prava zadržana.',
   footer_terms_title: 'Uslovi korišćenja',
   footer_privacy_title: 'Politika privatnosti',
   footer_back_to_site: 'Nazad na sajt',
@@ -135,6 +135,7 @@ const sr = {
   tour_why_title: 'Zašto ne smete propustiti?',
   tour_expect_title: 'Šta vas očekuje:',
   tour_pack_title: 'Ponesite:',
+  tour_max: 'Max',
   
   // Love Tours page
   love_title: 'Ture za parove – savršen poklon i nezaboravno iskustvo',

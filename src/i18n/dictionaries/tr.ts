@@ -135,6 +135,7 @@ const tr = {
   tour_why_title: 'Neden kaçırmamalısınız?',
   tour_expect_title: 'Sizi ne bekliyor:',
   tour_pack_title: 'Yanınıza alın:',
+  tour_max: 'Maks',
   
   // Love Tours page
   love_title: 'Çiftler için turlar – mükemmel hediye ve unutulmaz deneyim',

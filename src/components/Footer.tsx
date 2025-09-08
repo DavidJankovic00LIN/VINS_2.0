@@ -28,8 +28,6 @@ export default function Footer() {
               </p>
               <div className="space-y-2 text-sm text-blue-200">
                 <div>🏢 {t('footer_company_info')}</div>
-                <div>📋 {t('footer_pib')}</div>
-                <div>📄 {t('footer_registration')}</div>
                 <div>📍 {t('footer_address')}</div>
               </div>
             </div>
@@ -39,8 +37,6 @@ export default function Footer() {
               <h4 className="font-semibold mb-4 text-white">{t('footer_contact_title')}</h4>
               <div className="space-y-2 text-sm text-blue-200">
                 <div>📧 {t('footer_email')}</div>
-                <div>📱 {t('footer_phone')}</div>
-                <div>📱 {t('footer_whatsapp')}</div>
                 <div>📘 {t('footer_instagram')}</div>
                 <div>📘 {t('footer_facebook')}</div>
               </div>

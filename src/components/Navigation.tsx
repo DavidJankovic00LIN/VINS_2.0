@@ -25,10 +25,10 @@ export default function Navigation() {
   };
 
   const tourCategories = [
-    { name: 'Love Tours', link: '/tours/love-tours', icon: '💕' },
-    { name: 'Monastery Tours', link: '/tours/monastery-tours', icon: '⛪' },
-    { name: 'City & History Tours', link: '/tours/city-history-tours', icon: '🏛️' },
-    { name: 'Custom Tours', link: '/tours/custom-tours', icon: '🎯' }
+    { name: t('tours_love_name'), link: '/tours/love-tours', icon: '💕' },
+    { name: t('tours_monastery_name'), link: '/tours/monastery-tours', icon: '⛪' },
+    { name: t('tours_city_name'), link: '/tours/city-history-tours', icon: '🏛️' },
+    { name: t('tours_custom_name'), link: '/tours/custom-tours', icon: '🎯' }
   ];
 
   const toggleMobileMenu = () => {
@@ -68,7 +68,7 @@ export default function Navigation() {
                  <Link href="/" className="order-2 md:order-1 inline-flex items-center">
           <Image src={logo} alt="Maja Tours" className="h-11 w-auto object-contain" priority />
         </Link>
-
+        
         {/* Desktop Navigation */}
                  <div className="hidden md:flex gap-6 text-sm order-2">
           <Link href="/#about" className="text-white hover:text-blue-300 hover:scale-105 transition-all duration-200">{t('nav_about')}</Link>
@@ -109,36 +109,36 @@ export default function Navigation() {
        
        {/* Desktop Language Selector */}
       <div className="hidden md:block relative order-3">
-        <button
-          onClick={toggleLanguageMenu}
+                      <button
+            onClick={toggleLanguageMenu}
           className="h-9 px-3 rounded-full border border-orange-500/40 bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 hover:border-orange-500/60 hover:scale-105 transition-all flex items-center gap-2"
           aria-label="Select language"
-        >
+          >
           <Image src={`/flags/${lang === 'ENG' ? 'eng' : lang === 'SRB' ? 'srb' : 'tur'}.svg`} alt={lang} width={20} height={14} className="h-[14px] w-auto" />
-          <svg className={`w-4 h-4 transition-transform ${isLanguageMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        {isLanguageMenuOpen && (
+           <svg className={`w-4 h-4 transition-transform ${isLanguageMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+           </svg>
+         </button>
+         {isLanguageMenuOpen && (
           <div className="absolute right-0 mt-2 w-28 bg-gradient-to-b from-slate-900 to-indigo-900 border border-blue-400/30 rounded-lg shadow-xl py-1 z-50">
-            {languages.map((lng) => (
-              <button
-                key={lng.code}
-                onClick={() => selectLanguage(lng.code as 'ENG' | 'SRB' | 'TUR')}
+             {languages.map((lng) => (
+               <button
+                 key={lng.code}
+                 onClick={() => selectLanguage(lng.code as 'ENG' | 'SRB' | 'TUR')}
                 className={`w-full text-left px-3 py-2 text-sm text-white hover:bg-blue-500/20 transition-colors ${
-                  lang === lng.code ? 'bg-blue-500/30 font-medium' : ''
-                }`}
-              >
+                   lang === lng.code ? 'bg-blue-500/30 font-medium' : ''
+                 }`}
+               >
                 <Image src={`/flags/${lng.code === 'ENG' ? 'eng' : lng.code === 'SRB' ? 'srb' : 'tur'}.svg`} alt={lng.name} width={20} height={14} className="h-[14px] w-auto" />
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
+               </button>
+             ))}
+           </div>
+         )}
+       </div>
 
       {/* Mobile Language Selector (mobile right) */}
       <div className="relative md:hidden order-3">
-        <button
+                <button
           onClick={toggleLanguageMenu}
           className="h-9 px-3 rounded-full border border-orange-500/40 bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 hover:border-orange-500/60 transition-all flex items-center gap-2"
           aria-label="Select language"
@@ -163,10 +163,10 @@ export default function Navigation() {
             ))}
           </div>
         )}
-      </div>
-    </nav>
+         </div>
+     </nav>
 
-      {/* Mobile Dropdown Menu */}
+     {/* Mobile Dropdown Menu */}
               <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="bg-gradient-to-b from-slate-900 to-indigo-900 backdrop-blur border-t border-blue-500/20 px-4 py-4 space-y-3">
          <Link href="/#about" className="block py-2 text-sm text-white hover:text-blue-300 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t('nav_about')}</Link>
@@ -209,8 +209,8 @@ export default function Navigation() {
          
          {/* Mobile Language Selector moved to top bar */}
        </div>
-      </div>
-    </header>
+     </div>
+   </header>
  );
 }
 

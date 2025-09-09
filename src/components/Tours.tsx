@@ -133,9 +133,8 @@ export default function Tours() {
               bookingLink: '/booking/beograd-noc-magije'
             }].map((f, idx) => (
             <AnimatedSection key={f.key} direction="up" delayMs={idx * 80}>
-              <a 
-                href={f.link}
-                className="rounded-xl border border-orange-200 p-6 bg-white text-gray-800 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group block hover:border-orange-300 flex flex-col h-full min-h-[360px]"
+              <div 
+                className="rounded-xl border border-orange-200 p-6 bg-white text-gray-800 hover:shadow-xl hover:scale-105 transition-all duration-300 group hover:border-orange-300 flex flex-col h-full min-h-[360px]"
               >
                 <div className="mb-4 rounded-lg overflow-hidden border border-blue-400/30 bg-white/5">
                   <Image
@@ -177,21 +176,27 @@ export default function Tours() {
                     </div>
                   )}
                 </div>
-                <div className="pt-2 mt-auto flex gap-3">
+                <div className="pt-2 mt-auto flex gap-2 flex-wrap">
+                  <a
+                    href={f.link}
+                    className="inline-flex items-center justify-center h-10 px-4 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors"
+                  >
+                    {t('tours_cta')}
+                  </a>
                   <button
                     onClick={(e) => { e.preventDefault(); setOpenFeaturedId(f.id); }}
-                    className="inline-flex items-center justify-center h-10 px-5 rounded-full bg-amber-400 text-white text-sm font-medium hover:bg-amber-500 transition-colors shadow"
+                    className="inline-flex items-center justify-center h-10 px-4 rounded-full bg-amber-400 text-white text-sm font-medium hover:bg-amber-500 transition-colors shadow"
                   >
                     {t('tours_read_more')}
                   </button>
                   <a
                     href={f.bookingLink}
-                    className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 transition-colors"
+                    className="inline-flex items-center justify-center h-10 px-4 rounded-full bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 transition-colors"
                   >
                     {t('tours_book_button')}
                   </a>
                 </div>
-              </a>
+              </div>
             </AnimatedSection>
           ))}
         </div>

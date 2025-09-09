@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import { city1, nature1 } from '@/photos';
+import { loveTour, monasteryTour, cityTour, customTour } from '@/photos';
 import { useI18n } from '@/i18n/I18nProvider';
 import { useState } from 'react';
 
@@ -37,9 +37,18 @@ export default function Tours() {
   };
 
   const getCategoryImage = (key: string) => {
-    // Privremene slike (koristiću dve postojeće, korisnik će kasnije zameniti)
-    if (key === 'love' || key === 'custom') return city1;
-    return nature1;
+    switch (key) {
+      case 'love':
+        return loveTour;
+      case 'monastery':
+        return monasteryTour;
+      case 'cityHistory':
+        return cityTour;
+      case 'custom':
+        return customTour;
+      default:
+        return customTour;
+    }
   };
 
 

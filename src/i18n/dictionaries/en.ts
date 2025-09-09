@@ -44,7 +44,7 @@ const en = {
   tours_custom_name: 'Custom Tours',
   tours_custom_desc: 'Create the perfect tour experience tailored to your interests and schedule',
   tours_cta: 'View available tours',
-  tours_featured_title: 'tours of the month',
+  tours_featured_title: 'Tours of the month',
   tours_featured_desc: 'Hand-picked experiences for this month – a romantic escape, a spiritual morning, and a magical city view from the river.',
   tours_book_button: 'Book this tour',
   tours_read_more: 'Read more',

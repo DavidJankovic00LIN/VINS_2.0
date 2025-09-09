@@ -2,6 +2,7 @@
 export { default as profilePhoto } from './profile-photo.jpg';
 export { default as aboutPhoto } from './about-photo.jpg';
 
+
 // Gallery Photos - Nature
 export { default as nature1 } from './nature-1.png';
 export { default as nature2 } from './nature-2.png';
@@ -41,6 +42,12 @@ export { default as food5 } from './food-5.png';
 export { default as food6 } from './food-6.png';
 export { default as food7 } from './food-7.png';
 export { default as food8 } from './food-8.png';
+
+//Tour category photos
+export { default as loveTour } from './love-tour.png';
+export { default as monasteryTour } from './monastery-tour.jpg';
+export { default as cityTour } from './city-tour.jpg';
+export { default as customTour } from './custom-tours.jpg';
 
 // Testimonial Photos
 export { default as testimonial1 } from './testimonial-1.jpg';
